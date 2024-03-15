@@ -1,0 +1,471 @@
+
+Guia de Comandos CMD (Terminal do Windows)
+por Andre H O Santos · Published 15 de junho de 2016 · Updated 8 de agosto de 2016 
+Todos são vulneráveis.
+O importante é ser atualizado.
+A Microsoft não é vulnerável, mas mais apetitoso.
+Um ataque a um sistema utilizado por muitas pessoas é mais relevante.
+— Kevin Mitnick
+Manipulando a Janela do Prompt no Ambiente Windows
+Para exibir o CMD em tela cheia, pressione “Alt+Enter”. Clicando no ícone que se encontra no alto à esquerda, você poderá acessar as propriedades da janela e escolher layout, cores, fontes, etc. Já para localizar texto, rolar tela, selecionar texto, copiar e colar, você deverá clicar com o botão direito do mouse dentro da própria janela e escolher a opção no menu que se abre.
+A opção /t:fg permite alterar as cores do interpretador de comandos. Por exemplo, digite cmd /t:17 e a tela ficar com as letras em branco num fundo azul. O “f” representa a cor do texto e o “g” a cor do fundo.
+Relação das cores que podem ser usadas:
+    • 0 – preto 
+    • 1 – Azul 
+    • 2 – Verde 
+    • 3 – Cian 
+    • 4 – Vermelho 
+    • 5 – Roxo 
+    • 6 – Amarelo 
+    • 7 – Branco 
+    • 8 – Cinza 
+    • 9 – Azul claro 
+    • A – Verde claro 
+    • B – Cian claro 
+    • C – Vermelho claro 
+    • D – Roxo claro 
+    • E – Amarelo claro 
+    • F – Branco Claro 
+Para obter mais informações sobre um comando específico, digite o “COMANDO” seguido de “/?”.
+ATENÇÃO: O Sistema Operacional Windows não é CASE SENSITVE, ou seja, os comandos podem ser digitados tanto em MAIÚSCULO quanto em MÍNUSCULO.
+Lista Geral de Comandos
+    • DIR: – Listando arquivos e pastas 
+    • COPY: – Copiar arquivos 
+    • MOVE: Mover arquivos ou renomear pastas 
+    • MD:– Criar uma Nova pasta 
+    • CD: Entrar em uma pasta 
+    • .:Retornar para a pasta anterior 
+    • RD:  Remover pastas 
+    • ERASE: Deletar arquivos 
+    • DEL:  Deletar arquivos 
+    • REN: Renomear arquivos (EX: ren imagem.jpg foto.jpg) 
+    • TIME:  O comando time permite acertar a hora e o comando date permite corrigir a data. 
+    • BOOTCFG: Permite ver as configurações do seu menu de boot 
+    • DEFRAG: Desfragmentador de disco. 
+    • DISKPART: Gerencia as partições de um disco. 
+    • DRIVERQUERY: Mostra a lista de drivers instalados no Windows e as respectivas propriedades. 
+    • FSUTIL: O comando fsutil tem vários complementos que serão listados digitando-o sem nenhum parâmetro. Digite fsutil fsingo drives e terá a lista dos drives no seu micro. 
+    • GEPRESULT: Este comando mostrará configurações de usuários e de diretivas de grupos. 
+    • RECOVER: Permite a recuperação de arquvios em disco danificado. 
+    • REG: Comando para exportar chaves do registro, copiar, restaurar, comparar, etc. 
+    • SCHTASKS: Para agendar, executar, alterar ou deletar tarefas numa máquina local ou remota com Windows. 
+    • SFC: Comando que permite verificar arquivos de sistemas alterados de forma indevida e recuperar os arquivos originais e oficiais da Microsoft, o que nem sempre será recomendável. Por exemplo, o arquivo uxtheme.dll modificado para permitir o uso de temas voltaria a ser substituído pelo original. 
+    • SHUTDOWN: O comando shutdown permite desligar ou reiniciar o computador de forma imediata ou agendada. 
+    • SYSTEMINFO: Fornece informações básicas sobre o sistema. 
+    • TASKLIST: Mostra a lista de processos sendo executados no Windows. 
+    • TASKKILL: Permite finalizar algum processo. O comando é quase sempre usado com base nas informações fornecidas pelo tasklist. Por exemplo, para finalizar o Messenger digite “taskkill /PID 1680”. A identificação do PID de cada processo sendo executado você ficará sabendo com o comando tasklist. 
+    • ASSOC: Exibe ou modifica associações de extensões de arquivo. 
+    • AT: Agenda comandos e programas para serem executados em um computador. 
+    • ATTRIB: Exibe ou altera atributos de arquivos. 
+    • BOOTCFG: Mostra o boot.ini no prompt de comando 
+    • BREAK: Define ou limpa a verificação estendida CTRL+C. 
+    • CACLS: Exibe ou modifica listas de controle de acesso (ACLs) de arquivos. 
+    • CALL: Chama um programa em lotes a partir de outro. 
+    • CHCP: Exibe ou define o número da página de código ativa. 
+    • CHKDSK: Verifica um disco e exibe um relatório de status. 
+    • CHKNTFS: Exibe ou modifica a verificação do disco na inicialização. 
+    • CLS: Limpa a tela 
+    • CMD: Abre uma outra janela de prompt. 
+    • COLOR: Define as cores padrão de primeiro plano e do plano de fundo do console 
+    • COMP: Compara o conteúdo de dois arquivos ou grupos de arquivos. 
+    • COMPACT: Exibe ou altera a compactação de arquivos. 
+    • CONVERT: Converte volumes FAT em NTFS. 
+    • COPY: Copia um ou mais arquivos para outro local. 
+    • DATE: Mostra a data atual e permite alterá-la. 
+    • DISKCOMP: Compara o conteúdo de dois disquetes. 
+    • DISKCOPY: Copia o conteúdo de um disquete para outro. 
+    • DISKPART: Faz particionamento de disco 
+    • DOSKEY: Edita linhas de comando, volta a chamar comandos do Windows e cria macros. 
+    • ECHO: Exibe mensagens ou ativa ou desativa o eco de comandos. 
+    • ENDLOCAL: Encerra a localização de alterações de ambiente em um arquivo em lotes. 
+    • EXIT: Sai do programa CMD.EXE (interpretador de comandos). 
+    • FC:Compara dois arquivos ou grupos de arquivos e exibe as diferenças entre eles. 
+    • FIND: Procura uma seqüência de texto em um arquivo ou arquivos. 
+    • FINDSTR: Procura seqüências de texto em arquivos. 
+    • FOR: Executa um determinado comando para cada arquivo em um grupo de arquivos. 
+    • FORMAT: Formata um disco rígido ou disquete. 
+    • FTYPE: Exibe ou modifica os tipos de arquivo utilizados em associações de extensões de arquivos. 
+    • GOTO: Direciona o interpretador de comandos do Windows para uma linha identificada em um programa em lotes. 
+    • GRAFTABL: Permite que o Windows exiba um conjunto de caracteres estendidos em modo gráfico. 
+    • HELP: Fornece informações de ajuda sobre comandos do Windows. 
+    • HOSTNAME: Dá o nome do host 
+    • IF: Realiza processamento condicional em arquivos em lotes. 
+    • IPCONFIG: Mostra detalhes das configurações de IP 
+    • LABEL: Cria, altera ou exclui o rótulo de volume de um disco. 
+    • MODE: Configura um dispositivo do sistema. 
+    • MORE: Exibe a saída fazendo pausa a cada tela. 
+    • MOVE: Move um ou mais arquivos de uma pasta para outra pasta. 
+    • PAGEFILECONFIG: Configura memória virtual 
+    • PATH: Exibe ou define um caminho de pesquisa para arquivos executáveis. 
+    • PAUSE: Suspende o processamento de um arquivo em lotes e exibe uma mensagem. 
+    • PING: Checa sua conexão de rede disponível 
+    • POPD: Restaura o valor anterior da pasta atual salva por PUSHD. 
+    • PRINT: Imprime um arquivo de texto. 
+    • PROMPT: Altera o prompt de comando do Windows. 
+    • PUSHD: Salva a pasta atual e, em seguida, altera a mesma. 
+    • REM: Grava comentários (observações) em arquivos em lotes. 
+    • REPLACE: Substitui arquivos. 
+    • ROUT: Mostra detalhes do parâmetro da interface de rede 
+    • SCHTASKS: Agenda e executa algum processo 
+    • SET: Exibe, define ou remove variáveis de ambiente do Windows. 
+    • SETLOCAL: Inicia a localização de alterações de ambiente em um arquivo em lotes. 
+    • SHIFT: Altera a posição dos parâmetros substituíveis em um arquivo em lotes. 
+    • SORT: Classifica a entrada. 
+    • START: Inicia uma janela separada para executar um programa ou comando especificado. 
+    • SUBST: Associa um caminho a uma letra de unidade. 
+    • TITLE: Define o título da janela para uma sessão do CMD.EXE. 
+    • TREE: Exibe graficamente a estrutura de pastas de uma unidade ou caminho. 
+    • TYPE: Exibe o conteúdo de um arquivo de texto. 
+    • VER: Mostra a versão do Windows. 
+    • VERIFY: Faz com que o Windows verifique se os arquivos estão gravados corretamente em um disco. 
+    • VOL: Exibe um rótulo e número de série de volume de disco. 
+    • XCOPY: Copia diretórios com seus subdiretórios. 
+Comandos do Painel de Controle
+    • CPL: abre as opções de acesso 
+    • CPL: abre a ferramenta Adicionar/Excluir um programa 
+    • MSC: abre o gerenciador de autorizações 
+    • MSC: abre os certificados para o usuário atual 
+    • CLICONFG: abre a configuração dos clientes SQL 
+    • CPL: abre a vizinhança imediata 
+    • MSCou DCOMCNFG: abre a ferramenta serviços e componentes 
+    • MSC: abre a ferramenta de gestão do computador 
+    • COMPUTERDEFAULTS: abre a ferramenta dos programas padrão 
+    • CONTROL /NAME MICROSOFT.BACKUPANDRESTORECENTER: abre o centro de backup e de restauração . 
+    • CONTROL ADMINTOOLS: abre as ferramentas de administração 
+    • CONTROL COLOR: abre as configurações de aparência 
+    • CONTROL FOLDERS: abre as opções de pastas 
+    • CONTROL FONTS: abre o gerenciador de caracteres 
+    • CONTROL INTERNATIONAL ou INTL.CPL: abre as opções regionais e linguísticas 
+    • CONTROL KEYBOARD: abre as propriedades do teclado 
+    • CONTROL MOUSE ou MAIN.CPL: abre as propriedades do mouse 
+    • CONTROL PRINTERS: abre as impressoras e os faxes disponíveis 
+    • CONTROL USERPASSWORDS: abre o editor de contas dos usuários 
+    • CONTROL USERPASSWORDS2ou NETPLWIZ: controla os usuários e seus acessos 
+    • CONTROL: abre o Painel de controle 
+    • CREDWIZ: abre a ferramenta de backup e de restauração de senhas dos usuários 
+    • CPL: abre as configurações de exibição 
+    • MSC: abre o gerenciador de periféricos. 
+    • DXDIAG: abre a ferramenta de diagnóstico DirectX 
+    • EVENTVWR ou EVENTVWR.MSC: abre o observador de eventos 
+    • MSC: abre as pastas compartilhadas 
+    • MSC: abre o editor de estratégias de grupo (Para as edições profissionais e mais do Windows) 
+    • CPL: abre o assistente “adicionar hardware” 
+    • CPL: abre o assistente “compatibilidade de programas” 
+    • CPL: abre o gerenciador de infravermelho 
+    • ISCSICPL: abre a ferramenta de configuração do iniciador ISCI Microsoft 
+    • CPL: abre a ferramenta do controlador de jogos 
+    • LPKSETUP: abre o assistente de instalação e desinstalação dos idiomas de exibição 
+    • MSC: abre o editor dos usuários e grupos locais 
+    • MDSCHED: abre a ferramenta de diagnósticos da memória Windows 
+    • MMC: abre um novo console vazio 
+    • CPL: abre as configurações de som 
+    • MOBSYNC: abre o centro de sincronização 
+    • MSCONFIG: abre a ferramenta de configuração do sistema 
+    • MSC: abre a ferramenta de configuração do cliente NAP 
+    • MSC: abre o gerenciador de suporte de armazenamento removível 
+    • MSC: abre as solicitações do operador de armazenamento removível 
+    • ODBCAD32: abre o administrador de fonte de dados ODBC 
+    • OPÇÃOALFEATURES: abre a ferramenta Adicionar/Excluír componentes do Windows 
+    • PERFMON ou PERFMON.MSC: abre o monitor de confiabilidade e de desempenho Windows. 
+    • CPL: abre o gerenciador de modos de alimentação 
+    • REGEDIT ou REGEDT32: abre o editor de registro 
+    • REKEYWIZ: abre o gerenciador de certificados de criptografia de arquivos 
+    • MSC: abre o jogo de estratégia resultante 
+    • MSC: abre as configurações de segurança local 
+    • MSC: abre o gerenciador de serviços 
+    • SLUI: abre o assistente de ativação do Windows 
+    • CPL: abre as propriedades do sistema 
+    • SYSEDIT: abre o editor de configuração do sistema (Atenção, manipular com cautela) 
+    • SYSKEY: abre o utilitário de proteção do banco de dados das contas Windows (Atenção, manipular com extrema cautela !) 
+    • SYSPREP: abre a pasta com a ferramenta de preparação do sistema 
+    • CPL: abre as configurações para o Tablet pc 
+    • MSC ou CONTROL SCHEDTASKS: abre o planejador de tarefas 
+    • CPL: abre a ferramenta de conexão telefônica 
+    • CPL: abre as configurações da hora e da data 
+    • MSC: abre a ferramenta de gestão do módulo de plataforma segura no computador local 
+    • UTILMAN: abre as opções de ergonomia (Central de Facilidades de Acesso) 
+    • MSC: abre o “Windows Management Infrastructure” 
+    • CPL: abre o centro de segurança Windows 
+Comandos de Programas e ferramentas Windows
+    • CALC: abre a calculadora 
+    • CHARMAP: abre a tabela de caracteres 
+    • DIALER: abre o numerador telefônico do Windows 
+    • DVDPLAY: abre seu leitor DVD 
+    • EUDCEDIT: abre o editor de caracteres privados 
+    • EXPLORER: abre o Windows Explorer 
+    • FSQUIRT: Assistente de transferência Bluetooth 
+    • IEXPLORE: abre Internet Explorer 
+    • IEXPRESS: abre o assistente de criação dos arquivos auto-extraíveis. 
+    • MAGNIFY: abre a lupa 
+    • MOVIEMK: abre o Windows Movie Maker 
+    • MRT: executa o utilitário de remoção de malwares. 
+    • MSDT: abre a ferramenta de diagnósticos e suporte da Microsoft 
+    • MSINFO32: abre as informações do sistema 
+    • MSPAINT: abre o “Paint” 
+    • MSRA: abre a assistência remota do Windows 
+    • MSTSC: abre a ferramenta de conexão da assistência remota 
+    • NOTEPAD: abre o bloco de notas 
+    • OSK: abre o teclado visual. 
+    • SIGVERIF: abre a ferramenta de verificação das assinaturas de arquivos 
+    • SNDVOL: abre o misturador de volume 
+    • SOUNDRECORDER: abre o gravador 
+    • TASKMGR: abre o gerenciador de tarefas do Windows 
+    • WINVER: abre a janela para que você conheça a versão do seu Windows 
+    • WINWORD: abre o Word (se estiver instalado) 
+    • WMPLAYER: abre o leitor Windows Media 
+    • WRITE ou WORDPAD: abre o Wordpad 
+Comandos de Gestão de discos
+    • CHKDSK: realiza uma análise da partição especificada nas configurações do comando (Para mais informações, digite CHKDSK /? no interpretador de comandos CMD) 
+    • CLEANMGR: abre a ferramenta de limpeza do disco 
+    • DEFRAG: Desfragmenta o disco rígido 
+    • MSC: abre a ferramenta de desfragmentação do disco 
+    • MSC: abre o gerenciador de discos 
+    • DISKPART: abre a ferramenta de particionamento (manipulação pesada) 
+Comandos de Gestão das Redes e Internet
+    • CONTROL NETCONNECTIONS ou NCPA.CPL: abre as conexões da rede 
+    • CPL: abre o firewall do Windows 
+    • CPL: abre as propriedades da internet 
+    • IPCONFIG: exibe as configuraçãos dos endereços IP no computador 
+    • MSC: abre as funções avançadas do firewall do Windows 
+Atalhos, paths e comandos adicionais:
+    • %HOMEDRIVE%: abre o explorador na partição onde o sistema operacional está instalado. 
+    • %HOMEPATH%: abre a pasta do usuário conectado. Por exemplo C:\Usuários\[nome do usuário] 
+    • %PROGRAMFILES%: abre a pasta de instalação de outros programas (Program Files) 
+    • %TEMP% ou %TMP%: abre a pasta temporária 
+    • %USERPROFILE%: abre a pasta do perfil do usuário conectado 
+    • %WINDIR% ou %SYSTEMROOT%: abre a pasta de instalação do Windows 
+    • %WINDIR%\system32\rundll32.exe shell32.dll,Control_RunDLL hotplug.dll: exibe a janela “Retirar o dispositivo com segurança” 
+    • CPL: abre as propriedades do filtro AC3 (se estiver instalado) 
+    • FIREFOX: executa Mozilla FireFox (se estiver instalado) 
+    • JAVAWS: Visualiza o cache do software JAVA (se estiver instalado) 
+    • LOGOFF: fecha a sessão 
+    • NETPROJ: autoriza ou não a conexão a um projetor de rede 
+    • SFC /SCANNOW: varre, imediatamente, todos os arquivos do sistema e localiza os que estão danificados 
+    • SFC /VERIFYONLY: varre apenas os arquivos do sistema 
+    • SFC /SCANFILE=”nome e caminho do arquivo”: varre o arquivo especificado e repara, caso esteja danificado. 
+    • SFC /VERIFYFILE=”nome e caminho do arquivo”: varre apenas o arquivo especificado 
+    • SFC /SCANONCE: varre os arquivos do sistema no arranque seguinte 
+    • SFC /REVERT: repõe a configuração inicial (Para mais informações, digite SFC /? no interpretador de comandos) 
+    • SHUTDOWN: desliga o Windows 
+    • SHUTDOWN -A: interrompe a desconexão do Windows 
+    • DRIVERQUERY:  O driverquery é uma ferramenta que fornece informações sobre os drivers de hardware instalados em seu computador. Você pode usar o comando driverquery -v ou driverquery -si 
+    • POWERCFG:  é um comando que lhe ajuda a habilitar recursos e obter várias informações sobre a energia do computador, como habilitar a hibernação e obter informações sobre o consumo de energia do Windows. 
+    • PATHPING: O “pathping” é uma versão avançada do ping que exibe várias informações sobre a rota dos pacotes e lhe ajuda a descobrir onde está o problema. Como o ping, digite “pathping” + o nome ou o endereço IP do host. 
+Fontes:
+http://computeirodadepressao.com/guia-de-comandos-do-cmd-de-todos-os-windows/
+http://br.ccm.net/faq/1420-lista-de-comandos-do-windows
+http://pt.wikihow.com/Descobrir-Todos-os-Comandos-do-CMD-no-Seu-Computador
+
+Andre H O Santos
+Pentester, Especialista em Segurança de Redes e Testes de Invasão, Programador, Consultor e Professor de T.I.. Geek Inveterado, Apaixonado por Segurança da Informação e Louco por GNU/Linux. Dedica grande parte do seu tempo para criar soluções que ajudem dezenas de milhares de pessoas com dicas e artigos em Tecnologia e Segurança da Informação. Possui algumas Certificações em Ethical Hacking, Cabling System, Security+, SIEM Netwitness, SIEM SNYPR Securonix e Proficiência em Soluções de Vulnerability Management da Tenable.
+medium.com/@mrhenrike/
+Tags: Batch ScriptCMDLinha de ComandosMS-DOSPrompt de ComandoWindows
+Você pode gostar...
+    •  0 
+                  Criando uma Máquina Virtual com VirtualBox 
+      17 de novembro de 2016 
+       por Lucas O Toloto · Published 17 de novembro de 2016 · Last modified 6 de dezembro de 2017 
+    •  0 
+                  Protegendo seu PC com GNU/Linux [Parte 2/4: Básico] 
+      20 de agosto de 2017 
+       por Andre H O Santos · Published 20 de agosto de 2017 · Last modified 20 de maio de 2019 
+    •  1 
+                  Implementando um Servidor Web Java com Tomcat no Debian 
+      28 de outubro de 2016 
+       por Andre H O Santos · Published 28 de outubro de 2016 · Last modified 6 de novembro de 2016 
+34 Resultados
+    • Comentários34 
+    • Pingbacks0 
+    1. 
+        josino andre mourad souza disse: 
+       9 de janeiro de 2020 às 08:37 
+       bom dia gostaria saber como me transformo em um hacker
+       Responder
+        ?  Andre H O Santos disse: 
+          15 de fevereiro de 2020 às 17:54 
+          Não existe um “cook-book” ou receita de bolo ou guia definitivo de como tornar-se um Hacker. É uma profissão, um estilo de vida e depende de várias Skills do indivíduo. 
+          Se você gosta da área de tecnologia e segurança cibernética e principalmente, gosta de estudar, de enfrentar desafios e não está contente com as definições padrões que impõem sobre os sistemas, então já está iniciando certo. 
+          Estude sempre (isso nunca vai acabar, hahaha). Mas, no geral uma boa dica é ter um bom conhecimento em Redes de Computadores, Programação, Segurança da Informação e Políticas de SegInfo. Esse será um começo e a partir daí, poderá guiar-se por onde julgar melhor.
+          Obrigado por seu comentário.
+          Responder
+        ? 
+    2.  Emanuel disse: 
+       13 de dezembro de 2020 às 13:12 
+       Olá, tudo bom?
+Gostei muito do seu conteúdo e percebi que você é fera em comandos msdos, por isso gostaria de fazer uma pergunta: Como faço para alterar o local de pasta de um diretório via cmd?
+Procurei em vários locais e não consegui obter uma ajuda, poderia me auxiliar?
+       Responder
+        ?  Andre H O Santos disse: 
+          29 de janeiro de 2021 às 10:43 
+          Você pode utilizar o comando “MOVE” do Prompt de Comandos do Windows.
+Sintaxe:
+move “” “”
+          Exemplo:
+move c:\minhapasta d:\novolocal 
+          Responder
+        ? 
+    3.  Samuek disse: 
+       14 de fevereiro de 2021 às 20:57 
+       Boa noite, gostaria de fazer um executável através do cmd para que todo dia em uma certa hora o computador me mostrasse uma notificação, com resposta interativa que ao responder positivamente ele executaria um shutdown. É possível?
+       Responder
+        ?  Andre H O Santos disse: 
+          22 de março de 2021 às 14:32 
+          Sim, é possível. Crie um script (batch ou poweshell) e armazene em um local seguro com permissões do seu usuário apenas.
+Utilize o agendador de tarefas para executá-lo (trigger) na hora e momento que você deseja.
+O seu script irá executar a ação que você programar. Neste seu exemplo é “mostrasse uma notificação, com resposta interativa que ao responder positivamente ele executaria um shutdown“…
+O agendador de tarefas fará o papel de disparar o script “todo dia em uma certa hora“.
+          Responder
+        ? 
+    4.  Cristian disse: 
+       16 de fevereiro de 2021 às 20:24 
+       Boa noite, preciso de uma resposta. Como desativo um macro? faz tempo que fiz ele, não sei onde está o arquivo. Sempre quando inicio o prompt o prompt executa “doskey make=mingw32-make.exe”
+       Responder
+        ?  Andre H O Santos disse: 
+          22 de março de 2021 às 14:29 
+          Hmm… provavelmente o DosKey está com alguma execução programada. Tente limpar o histórico do DosKey e verificar se há alguma macro aberta. Vou te encaminhar o link do DosKey que poderá ajudá-lo. Não tenho uma sintaxe específica pois depende do seu cenário e ambiente.
+          https://docs.microsoft.com/pt-br/windows-server/administration/windows-commands/doskey
+https://superuser.com/questions/1422408/powershell-keeps-printing-doskey
+          Provavelmente irá ajudá-lo melhor.
+          Responder
+        ? 
+    5.  Alexandre Santos de Souza disse: 
+       26 de fevereiro de 2021 às 13:57 
+       como chamo um programa enviando um argumento com espaço?
+ex: system(“atari2600\\atari2600 roms\\pac man.bin”);
+       Responder
+        ?  Andre H O Santos disse: 
+          22 de março de 2021 às 14:22 
+          Aí depende do interpretador. Por exemplo, se for executar um script batch ou powershell comum, basta passar a estrutura inteira dentro de aspas duplas. Mas pode ser que teu script dê erros de acordo com a versão do prompt ou PS que for executar, daí o espaço em branco deverá ser escapado por contra-barra “\”. 
+          ex: system(“atari2600\\atari2600\ roms\\pac\ man.bin”);
+          Responder
+        ? 
+    6.  Gustavo Correa Da Boit disse: 
+       12 de março de 2021 às 23:59 
+       queria saber como faço para abrir uma janelinha com o texto que eu quero de informações?
+       Responder
+        ?  Andre H O Santos disse: 
+          22 de março de 2021 às 14:19 
+          Opa, não compreendi muito bem sua dúvida. Você quer saber como abrir uma janela do PROMPT CMD ou eh algo mais específico??
+          Responder
+        ? 
+    7.  Lashawn disse: 
+       24 de março de 2021 às 23:45 
+       Hi to all, it’s in fact a good for me to visit this site,
+it consists of precious Information.
+       Responder
+    8.  Gustavo disse: 
+       16 de abril de 2021 às 14:11 
+       como q eu vejo o caminho deixado por alguem q invadiu um aparelho
+       Responder
+        ?  Andre H O Santos disse: 
+          5 de julho de 2021 às 18:38 
+          Não há uma resposta assertiva para sua pergunta. Cada ataque tem seu próprio comportamento. Mas, no geral, o primeiro passo é analisar os logs do sistema.
+          Responder
+        ? 
+    9.  Thiago disse: 
+       12 de junho de 2021 às 01:50 
+       como eu faço para entrar em uma rede de wi-fi no cmd e invadir rede de celulares conectados a rede
+       Responder
+        ?  Andre H O Santos disse: 
+          5 de julho de 2021 às 18:37 
+          Eh necessários alguns conhecimentos específicos de invasão de redes sem-fios. Não há uma receita de bolo para o ataque, é preciso entender o ambiente do alvo e tentar diversos ataques.
+Nós da União Geek inclusive, temos um treinamento acessível na Udemy.
+Segue link caso deseje conferir o curso de Wi-Fi Hacking: https://www.udemy.com/course/tecnicas-de-invasao-em-redes-sem-fios-wi-fi-hacking/
+          Responder
+        ? 
+    10.  Rogério disse: 
+       8 de julho de 2021 às 10:50 
+       Bom dia!
+Como faço para executar uma API Rest através de um comando http via command line?
+Obrigado.
+       Responder
+        ?  Andre H O Santos disse: 
+          17 de agosto de 2021 às 12:18 
+          Depende do seu sistema operacional. Uso de CLI é restrito ao SO. Por exemplo, no Linux vc pode usar o cURL para interagir com requisições HTTP/S. No Windows, você pode usar o powershell com Invoke-RestMethod e criar uma função interna interagindo com os parâmetros. Da uma olhada neste link aqui que tem um exemplo: https://virtuallysober.com/2019/03/12/converting-curl-to-powershell-for-rest-apis/.
+          Responder
+        ? 
+    11.  Earnestine disse: 
+       22 de julho de 2021 às 02:44 
+       I am curious to find out what blog platform you’re working with?
+I’m experiencing some minor security problems with my latest site and I would like to find something more risk-free.
+Do you have any recommendations?
+       Responder
+        ?  Andre H O Santos disse: 
+          17 de agosto de 2021 às 12:14 
+          Currently used WordPress
+          Responder
+        ? 
+    12.  Rômulo disse: 
+       4 de novembro de 2021 às 16:31 
+       Boa Tarde.
+       Teria como fazer um script que apaga o conteudo do perfil de usuario do dominio ad, por exemplo de um usuário C:\Users\”fulano.silva”, (apagaria o conteudo das pastas (desktop, documentos, downloads, etc) todo dia ao desligar o PC?
+       Responder
+        ?  Andre H O Santos disse: 
+          16 de novembro de 2021 às 19:59 
+          Sim, é possível. Você pode criar o script via powershell e chamar via GPO no seu AD.
+          Responder
+        ? 
+    13.  Samuel disse: 
+       17 de março de 2022 às 09:40 
+       Como faço para filtrar uma informação que esta dentro de um arquivo, e atribuir para uma variável? A idéia é validar a versão de um programa para executar a instalação de uma versão atualizada.
+       Responder
+    14.  381 disse: 
+       15 de dezembro de 2022 às 23:59 
+       Hmmm is anyonne elsee encountering problems with the images onn this blog loading?
+I’m ttrying to determine if itts a prfoblem on mmy end orr iff it’s the blog.
+Anyy suggestions ould bee greatly appreciated.
+       Responder
+    15.  918 disse: 
+       15 de janeiro de 2023 às 01:59 
+       Fanhtastic beatt ! I would like to apprentice aat the
+same time aas youu amend your site, howw could i subscribe for
+a blog web site? Thee accojnt aidsed me a applicabhle
+deal. I hace been a little bit familkiar of this your broadcast provided vivid
+clar idea
+       Responder
+    16.  TINY4K Valentines Day Naked Sex Treats With Kenzie Reeves disse: 
+       28 de fevereiro de 2023 às 08:01 
+       Keep oon writing, greatt job!
+       Responder
+    17.  ???? disse: 
+       1 de março de 2023 às 18:40 
+       Veery nice post. I juet stumbled upon your weblog annd waanted tto sayy thaat I have trruly enjoyed browsing
+your bblog posts. After alll I’ll be subscribing to
+your feed and I hope yoou write again soon!
+       Responder
+    18.  Nadine disse: 
+       28 de março de 2023 às 23:30 
+       Quallity posts iss the crucia to attrdact the userrs too
+payy a quick visit the web site, that’s what this webb site is providing.
+       Responder
+    19.  https://dev.xxxcrunch.com/top6463466911 disse: 
+       30 de março de 2023 às 00:18 
+       Nicce respond in reeturn of this question with genuine
+arguments aand explaining the whle thuing onn the topic of that.
+       Responder
+    20.  Soaking Wet_Pussy Party disse: 
+       30 de março de 2023 às 13:37 
+       Pretty componednt to content. I just stumled upon your site aand iin accession capital to clazim thawt I acquire in fact loived account your
+weblopg posts. Anyway I’ll be subscribing inn your feeds and even I fulfillmnent you
+geet admission tto consistently rapidly.
+       Responder
+    21.  Lady Blum masturbating on the couch. disse: 
+       25 de abril de 2023 às 11:24 
+       At thi time itt seemss like Wordprss is the preferred blogging platform oout ther rght now.
+(fromwhat I’ve read) Is that what you’re using onn your blog?
+       Responder
+    22.  Osnaldo disse: 
+       20 de julho de 2023 às 13:29 
+       Gostei do conteúdo, mas senti falta da forma de usar os comandos.
+       Responder
+    23.  Osnaldo disse: 
+       20 de julho de 2023 às 14:57 
+       Precisando remover meus arquivos de um HD de um antigo notebook Toshiba para substituir o Windows pela distribuição Linux Zorin de 32 bits e Android, tento sistematicamente concluir o processo mas sou impedido por conta de um arquivo PDF que está “preso”.
+       Consigo “abrir” o PDF, o que indica que o arquivo não está “condenado”, mas de modo nenhum posso copiar/colar, recortar/colar ou mover o arquivo, seja pelo Windows ou com o uso do CMD, embora nesse último caso possa estar fazendo algo errado pela falta de conhecimento/prática.
+       Recebo mensagens como:
+“Ocorreu um erro ao ler o fluxo”,
+“Lendo o arquivo… Esse processo está demorando mais que o usual. Estamos trabalhando nisso. Tentar cancelar vai interromper uma leitura futura do arquivo”,
+“Não é possível ler o arquivo ou disco de origem”,
+“O documento não pôde ser salvo. Erro nos dados (verificação cíclica de redundância)”,
+“Não foi possível imprimir o documento, use nossa página Ajuda para soluções de problemas.”
+       Responder
