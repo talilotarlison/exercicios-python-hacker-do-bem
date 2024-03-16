@@ -1,0 +1,102 @@
+Para obter mais informaá‰es sobre um comando espec°fico,
+digite HELP nome_do_comando
+ASSOC          Exibe ou modifica associaá‰es de extens‰es de arquivo.
+ATTRIB         Exibe ou altera atributos de arquivos.
+BREAK          Define ou limpa a verificaá∆o estendida CTRL+C.
+BCDEDIT        Define propriedades no banco de dados de inicializaá∆o para
+               controlar o carregamento da inicializaá∆o.
+CACLS          Exibe ou modifica listas de controle de acesso de arquivos.
+CALL           Chama um programa em lotes por meio de outro.
+CD             Exibe o nome do diret¢rio atual ou faz alteraá‰es nele.
+CHCP           Exibe ou define o n£mero da p†gina de c¢digo ativa.
+CHDIR          Exibe o nome do diret¢rio atual ou faz alteraá‰es nele.
+CHKDSK         Verifica um disco e exibe um relat¢rio de status.
+CHKNTFS        Exibe ou modifica a verificaá∆o do disco na inicializaá∆o.
+CLS            Limpa a tela.
+CMD            Inicia uma nova instÉncia do interpretador de comandos do
+               Windows.
+COLOR          Define as cores padr∆o do primeiro plano e da tela de fundo
+               do console.
+COMP           Compara o conte£do de dois arquivos ou grupos de arquivos.
+COMPACT        Exibe ou altera a compactaá∆o de arquivos em partiá‰es NTFS.
+CONVERT        Converte volumes FAT em NTFS. N∆o Ç poss°vel converter a
+               unidade atual.
+COPY           Copia um ou mais arquivos para outro local.
+DATE           Exibe ou ajusta a data.
+DEL            Exclui um ou mais arquivos.
+DIR            Exibe uma lista de arquivos e subdiret¢rios em um diret¢rio.
+DISKPART       Exibe ou configura propriedades de partiá∆o de disco.
+DOSKEY         Edita linhas de comando, volta a chamar comandos do Windows e 
+               cria macros.
+DRIVERQUERY    Exibe status e propriedades do driver de dispositivo atual.
+ECHO           Exibe mensagens ou ativa/desativa o eco de comandos.
+ENDLOCAL       Encerra a localizaá∆o de alteraá‰es de ambiente em um arquivo em lotes.
+ERASE          Exclui um ou mais arquivos.
+EXIT           Sai do programa CMD.EXE (interpretador de comandos).
+FC             Compara dois arquivos ou grupos de arquivos e exibe as 
+               diferenáas entre eles.
+FIND           Procura uma cadeia de caracteres de texto em um ou mais arquivos.
+FINDSTR        Procura cadeias de caracteres em arquivos.
+FOR            Executa um determinado comando para cada arquivo em um grupo de arquivos.
+FORMAT         Formata um disco para ser usado com o Windows.
+FSUTIL         Exibe ou configura as propriedades do sistema de arquivos.
+FTYPE          Exibe ou modifica os tipos de arquivo utilizados em 
+               associaá‰es de extens‰es de arquivo.
+GOTO           Direciona o interpretador de comandos do Windows para uma 
+               linha identificada em um programa em lotes.
+GPRESULT       Exibe informaá‰es de pol°tica de grupo para o computador ou usu†rio.
+GRAFTABL       Permite que o Windows exiba um conjunto de caracteres 
+               estendidos em modo gr†fico.
+HELP           Fornece informaá‰es de ajuda sobre comandos do Windows.
+ICACLS         Exibir, modificar, fazer backup ou restaurar ACLs de 
+               arquivos e diret¢rios.
+IF             Realiza processamento condicional em arquivos em lotes.
+LABEL          Cria, altera ou exclui o r¢tulo de volume de um disco.
+MD             Cria um diret¢rio.
+MKDIR          Cria um diret¢rio.
+MKLINK         Cria Links Simb¢licos e Links F°sicos
+MODE           Configura um dispositivo do sistema.
+MORE           Exibe a sa°da fazendo pausa a cada tela.
+MOVE           Move um ou mais arquivos de um diret¢rio para outro 
+               diret¢rio.
+OPENFILES      Exibe arquivos abertos por usu†rios remotos para um compartilhamento de arquivo.
+PATH          Exibe ou define um caminho de pesquisa para arquivos execut†veis.
+PAUSE          Suspende o processamento de um arquivo em lotes e exibe uma mensagem.
+POPD           Restaura o valor anterior do diret¢rio atual salvo por 
+            PUSHD.
+PRINT          Imprime um arquivo de texto.
+PROMPT         Altera o prompt de comando do Windows.
+PUSHD          Salva o diret¢rio atual e o altera em seguida.
+RD             Remove um diret¢rio.
+RECOVER        Recupera informaá‰es leg°veis de um disco com defeito ou danificado.
+REM            Grava coment†rios (observaá‰es) em arquivos em lotes ou no CONFIG.SYS.
+REN            Altera o nome de um ou mais arquivos.
+RENAME         Altera o nome de um ou mais arquivos.
+REPLACE        Substitui arquivos.
+RMDIR          Remove um diret¢rio.
+ROBOCOPY       Utilit†rio avanáado para copiar arquivos e †rvores de diret¢rio
+SET            Exibe, define ou remove vari†veis de ambiente do Windows.
+SETLOCAL       Inicia a localizaá∆o de alteraá‰es de ambiente em um arquivo em lotes.
+SC             Exibe ou configura serviáos (processos em segundo plano).
+SCHTASKS       Agenda a execuá∆o de comandos e programas em um computador.
+SHIFT          Altera a posiá∆o dos parÉmetros substitu°veis em um arquivo em lotes.
+SHUTDOWN       Permite o desligamento local ou remoto adequado do computador.
+SORT           Classifica a entrada.
+START          Inicia uma janela separada para executar um programa ou comando especificado.
+SUBST          Associa um caminho a uma letra de unidade.
+SYSTEMINFO     Exibe a configuraá∆o e propriedades espec°ficas da m†quina.
+TASKLIST       Exibe todas as tarefas em execuá∆o no momento, inclusive serviáos.
+TASKKILL       Termina ou interrompe um processo ou aplicativo em execuá∆o.
+TIME           Exibe ou ajusta a hora do sistema.
+TITLE          Define o t°tulo da janela para uma sess∆o do CMD.EXE.
+TREE           Exibe graficamente a estrutura de diret¢rios de uma unidade 
+               ou caminho.
+TYPE           Exibe o conte£do de um arquivo de texto.
+VER            Exibe a vers∆o do Windows.
+VERIFY         Faz com que o Windows verifique se os arquivos est∆o gravados
+               corretamente em um disco.
+VOL            Exibe o r¢tulo de volume e o n£mero de sÇrie de um disco.
+XCOPY          Copia arquivos e †rvores de diret¢rios.
+WMIC           Exibe informaá‰es WMI em um comando interativo do shell.
+
+Para obter mais informaá‰es sobre ferramentas, consulte a referància a linhas de comando na ajuda online.
