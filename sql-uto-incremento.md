@@ -57,4 +57,4 @@ Aqui estão alguns detalhes sobre como o auto incremento funciona em diferentes 
      ```
      Isso redefine a sequência para 1, e a próxima inserção terá valor igual a "2" ³.
 
-Em resumo, o auto incremento é uma funcionalidade essencial para manter a integridade dos dados e garantir que cada registro tenha um valor único em uma coluna específica. Se você tiver mais perguntas ou precisar de exemplos adicionais, estou à disposição! 😊👍
+Em resumo, o auto incremento é uma funcionalidade essencial para manter a integridade dos dados e garantir que cada registro tenha um valor único em uma coluna específica. Se você tiver mais perguntas ou precisar de exemplos adicionais, estou à disposição! 
