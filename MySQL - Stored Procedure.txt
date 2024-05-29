@@ -1,0 +1,503 @@
+Instalar mySQL
+
+Chegou a hora de você pôr em prática o que foi visto na aula. Para isso, execute os passos listados abaixo.
+
+1) Se você está usando uma máquina limpa, deve instalar o MySQL. Para isso, siga as instruções a seguir (caso você já tenha o MySQL instalado, pode pular para o passo 22).
+
+2) Acesse o link https://www.mysql.com/downloads/, para baixar o MySQL.
+
+3) Procure por MySQL Community Edition e clique em Community (GPL) Downloads.
+
+4) Em MySQL on Windows (Installer & Tools), clique em Download.
+
+5) Clique em MySQL Installer.
+
+6) Clique no botão de download ao lado da opção Windows (x86, 32-bit), MSI Installer.
+
+7) Clique em No thanks, just start my download e espere o download terminar.
+
+8) Execute o instalador que foi baixado.
+
+9) Aceite os termos e clique em Next.
+
+10) Escolha a instalação Developer Default, clique em Next e em Next também na próxima tela.
+
+11) Clique em Execute, para fazer o download e instalação do banco e seus componentes. Terminado isso, clique em Next.
+
+12) Na próxima tela, clique em Next.
+
+13) Mantenha a escolha Standalone MySQL Server / Classic MySQL Replication e clique em Next.
+
+14) Mantenha as propriedades padrões do serviço e da porta de comunicação. Clique Next.
+
+15) Mantenha a opção Use Strong Password Encryption for Authentication. Clique em Next.
+
+16) Inclua a senha do usuário root e repita-a. Clique em Next.
+
+17) Em Windows Service, mantenha as propriedades padrões e clique em Next.
+
+18) Clique Execute para iniciar a instalação. Terminada a instalação, clique em Finish.
+
+19) Nas próximas telas, clique em Next, Finish e em Next.
+
+20) Na tela Connect To Server, digite a senha configurada anteriormente e clique em Check. Em seguida, clique em Next e em Execute em seguida.
+
+21) Finalize a instalação e automaticamente o Workbench será aberto. Clique na conexão que está configurada. Ao digitar a senha e clicar em OK, você acessará o ambiente com o MySQL no ar.
+
+22) Se você está usando uma máquina limpa, você deve recuperar a base de dados a ser usada neste curso. Para isso, siga as instruções a seguir.
+
+23) Caso ainda não tenha feito, faça o download do arquivo RecuperacaoAmbiente.zip aqui e descompate-o.
+
+24) Abra o MySQL Workbench. Utilize a conexão que está configurada.
+
+25) Clique com o botão direito do mouse sobre a área vazia de Schemas e escolha Create Schema.
+
+26) Insira o nome sucos_vendas. Clique em Apply duas vezes e em Finish em seguida.
+
+27) Na área Navigator, clique na aba Administration.
+
+28) Clique em Data Import/Restore.
+
+29) Na opção Import from Dump Project Folder, escolha o diretório DumpSucosVendas, que você baixou e extraiu anteriormente.
+
+30) Em seguida, clique no botão Start Import.
+
+31) Verifique se as tabelas foram criadas na base sucos_vendas.
+
+-------------------------
+
+MySQL_Stored Procedure
+
+Nesta aula, aprendemos:
+
+O control de fluxo IF-THEN-ELSE.
+Uma variação do controle anterior chamado IF-THEN-ELSEIF.
+A estrutura CASE;
+Como tratar erros no CASE quando nem todas as opções são contempladas;
+o CASE condicional, semelhante ao usado nos comandos SQL;
+O uso de Loops para repetir um conjunto de comandos até uma condição ser satisfeita.
+
+--------------------------
+
+Nesta aula, aprendemos:
+
+Conhecemos a estrutura de Cursor onde podemos atribuir valores resultados de um SELECT com múltiplas linhas.
+Vimos que podemos atribuir ao Cursos mais de uma coluna.
+Aprendemos como usar o Cursos em conjunto com um Looping.
+Foi mostrado como criamos e usamos uma função.
+
+---------------------------
+
+Nesta aula, aprendemos:
+
+Usamos nosso conhecimento prático para criação de uma SP que cria uma venda aleatória;
+Vimos como a SP pode melhorar o gerenciamento de TRIGGERs.
+
+
+------------------
+
+DBA - Database Administrator
+
+[00:00] Vamos começar falando sobre o DBA, quem é esse profissional? O DBA, ele é o profissional responsável por administrar o banco de dados e aí, eu menciono algumas características das funções de um DBA.
+
+[00:17] A primeira característica é avaliar o ambiente, o DBA, ele é o profissional que avalia os hardwares necessários para a instalação e funcionamento de uma SQP, ele deve avaliar se os equipamentos disponíveis são necessários, para que os bancos de dados possam corresponder às necessidades operacionais da empresa.
+
+[00:43] Outra característica do DBA, é que ele é responsável por configurar o acesso à base de dados, seja através de conexões ou através de interfaces IDE, são aquelas interfaces amigáveis, como por exemplo o MySQL Workbengh ou outra interface qualquer.
+
+[01:07] Cabe a ele também configurar as conexões de forma segura, para que o acesso entre o cliente e o servidor não seja, por exemplo, hackeado. Cabe também ao DBA manter o banco de dados performático, um dos instrumentos a sua disposição, por exemplo, são os índices.
+
+[01:27] Os índices são estruturas que melhoras as consultas e o retorno dos dados, sabe ao DBA buscar os melhores índices, para que ele seja usado nas aplicações que acessão dados, aos bancos de dados, também o DBA, ele é responsável pela armazenagem dos dados.
+
+[01:50] Cabe a ele fazer o backup das informações, para que as mesmas não sejam perdidas e também a sua função, recuperar esses dados, que eventualmente foram perdidos ou então, por uma necessidade qualquer do usuário.
+
+[02:08] Também cabe ao DBA auxiliar a área de desenvolvimento, fazendo cargas em lotes de dados, criar e apagar dados indesejáveis e desfragmentar o banco de dados e fazer a manutenção das tabelas. Também o DBA é responsável por monitorar a instalação do MySQL.
+
+[02:33] Cabe a ele observar os recursos que estão sendo consumidos pelo banco e fazer gerenciamentos pontuais na instalação atual, para que ela se adapte as necessidades dos usuários.
+
+[02:50] Também o DBA, ele é responsável por configurar o ambiente, através de arquivos de inicialização e dentro desses arquivos, ele pode configurar diversas propriedades, como por exemplo, configurar o auto incremento do tamanho das bases, gerenciar o seu crescimento, gerenciar o uso do espaço e administração do esquema de dados, enfim.
+
+[03:13] Diversas propriedades que são configuradas nesse arquivo de inicialização. Finalmente, o DBA também é responsável por administrar os usuários que irão acessar o MySQL. Ele é responsável por criar usuários básicos e avançados, usuários que vão poder fazer backups, usuários que vão, por exemplo, somente ler dados, enfim.
+
+[03:40] Cabe a ele administrar esses usuários e determinar que função cada um vai fazer dentro da base de dados. Enfim, essas são as funções mais o menos básicas de um DBA, dentro do ambiente do MySQL. Algumas pessoas questionam se ainda existe a necessidade de um DBA dentro das empresas.
+
+[04:07] Primeiro, porque já existe algumas ferramentas que otimizam a administração do banco de dados de forma automática e também com o adento das nuvens, ou seja, cada vez mais as empresas estão colocando os seus bancos de dados em nuvens.
+
+[04:28] O DBA perde um pouco o sentido, já que quem vai se preocupar em fazer backup, manutenção dos dados é o administrador da nuvem, mas eu diria que essas novas tecnologias, elas não invalidam a necessidade de um DBA, talvez as funções desse profissional tenham que ser modificadas.
+
+[04:51] Ou seja, cabe a ele ser expert nas ferramentas de produtividade ou então, cabe a ele entender a fundo como criar e administrar recursos de banco de dados em nuvem. Enfim, é um ponto que a gente pode ficar aqui durante muito tempo discutindo, mas não é o nosso foco.
+
+[05:12] Vamos seguindo esse treinamento, vendo algumas dessas funcionalidades na prática, funcionalidades que são de responsabilidade do DBA. Valeu. Obrigado.
+
+------------------
+Tuning de Hardware
+PRÓXIMA ATIVIDADE
+
+Play Video
+Transcrição
+[00:00] Vamos falar um pouquinho de tuning. Eu, quando estava preparando esse curso, eu tentei achar uma palavra que traduzisse tuning, não encontrei, seria “envenenar”, digamos assim, o nosso ambiente de MySQL, quando a gente fala que a gente faz um tuning num carro ou carro tunado, é uma palavra aportuguesada, da palavra tuning.
+
+[00:27] Eu estou envenenando o motor do carro, então fazer um tuning no MySQL, significa, a gente envenenar o MySQL, deixar ele mais rápido e a gente tem quatro maneiras de fazer um tuning dentro do nosso ambiente do MySQL.
+
+[00:42] Primeiro, trabalhando com os banco de dados e índices, são coisas que eu vou falar depois, nós temos tuning através das variáveis internas do MySQL, que a gente chama ali de MySQLD tuning e através do hardware e do sistema operacional que o MySQL está instalado.
+
+[01:10] Vou começar a falar agora um pouquinho para vocês sobre o tuning de hardware e depois o tuning do MySQLD. A primeira coisa que eu posso falar sobre o tuning de hardware, é claro, é considerar sempre sistemas operacionais de 64bits.
+
+[01:33] O MySQL tem uma gama de poder utilizar vários processadores em paralelo e de consumir realmente toda a capacidade de memória de hardware que a máquina possui.
+
+[01:50] Então, a gente dar preferencia a processadores de 64 bits, significa a gente poder ter processos com RAMs muito maiores do que, por exemplo, se eu estivesse usando processadores de 32 bits, onde os meus processos ficariam limitados a 2.4GB de RAM por processo.
+
+[02:18] Hoje em dia isso é muito pouco, então vamos dar ênfase, claro, aos sistemas operacionais de 64 bits. Claro que hoje em dia, a maioria dos computadores já são 64 bits, mas as vezes no ambiente corporativo, ainda temos servidores antigos e as vezes quando a gente vai instalar o MySQL, esses servidores antigos, são os que são disponibilizados para a gente poder trabalhar.
+
+[02:46] Outra coisa importante é ver a configuração de RAM que está sendo utilizada, na verdade, existe um parâmetro interno no MySQL, que a gente diz quanto de RAM os nossos processos vão poder consumir no máximo, é claro que eu não vou disponibilizar toda a RAM disponível dentro da minha máquina.
+
+[03:12] Normalmente a dica é que você disponibilize, pelo menos, no máximo 50% da sua RAM existente. Então, se eu estiver usando, por exemplo, um servidor com 32G de RAM, a gente vai ter então disponível para o MySQL, preferencialmente metade disso ou 16G.
+
+[03:38] Aí, cabe a você definir se esses 16G é muita coisa ou não e há aí uma relação que a experiência mostra... direta, entre o tamanho da base e a quantidade de RAM que o processo vai gastar, um exemplo é o seguinte. Opa, eu passei para frente, vamos lá.
+
+[04:02] Um exemplo é o seguinte, uma base normalmente de 1GB de tamanho, não vai gastar mais do que 8GB de RAM para fazer qualquer coisa nessa sua base. Claro que um ambiente real, a gente não vai ter só uma conexão fazendo coisa na base, eu vou ter várias conexões.
+
+[04:23] Então, dependendo da forma com que o banco é usado, talvez, mesmo tendo um bando de 1GB, 8G de RAM vai ser pouco, porque eu posso ter muitos processos acessando a base ao mesmo tempo. Outro ponto importante que deve ser colocado é o tipo de leitura de disco, o “io”, que esse banco vai ter.
+
+[04:51] E aí, claro, aonde estiver armazenado a base de dados, vai fazer uma enorme diferença. Hoje em dia, a gente tem diversos tipos de HDs de discos rígidos, onde nós podemos armazenar os nossos dados.
+
+[05:08] Claro que se você tiver dinheiro e capacidade de colocar tudo num disco SSD, que é um disco rígido de memória, aí ia ser imbatível, a velocidade de “io” vai ter um ganho enorme, mas hoje os SSDs ainda são caros. Então, a gente sempre vai encontrar discos do tipo: SCSI, SATA e SAS.
+
+[05:36] Desses três, normalmente SCSI são muito velhos, a gente quase não encontra mais hoje em dia e entre disco SAS e SATA, de preferência aos discos SAS, porque eles são mais performáticos. Outra forma também é como é que você usa a sua controladora de disco RAID.
+
+[05:59] Geralmente os discos RAID são usados, para a gente poder trazer segurança aos nossos dados. Existem vários tipos de RAID, os mais usados são RAID 0, RAID 1, RAID 5 e RAID 10, normalmente o seguinte, o RAID 0, ele vai dividir o seu dado e dois discos rígidos diferentes.
+
+[06:22] Então, eu tenho dois discos rígidos físicos, mas logicamente, eu enxergo somente um drive e aí, o sistema operacional vai dividindo esse dado entre os discod. O RAID 1, normalmente é uma cópia, eu tenho dois discos rígidos, eu olho um só, mas a capacidade do que eu olho de discos normalmente é de um deles somente.
+
+[06:51] E internamente, toda a vez que eu gravo, que eu incluo, altero ou excluo informações, essa operação é feita ao mesmo tempo nos dois discos, esse é o tipo RAID 1. Aí, você tem variantes do RAID 5 e RAID 10. RAID 5 seria a divisão dos dados, só que em mais discos.
+
+[07:14] E o RAID 10, seria o espelhamento dos discos, usando mais discos rígidos. Claro que o RAID 10 e o RAID 1, eles gastam metade do espaço físico fazendo redundância, mas com certeza, eles são mais seguros para suportar um bando de dados MySQL, porque se por acaso um dos discos quebrar ou tiver indisponível, eu tenho o meu dado no outro disco preservado.
+
+[07:50] Claro que essas configurações de hardware, elas vem muito com a experiência do profissional e o pessoal de infraestrutura e de suporte, eles podem ajudar muito o DBA a desenhar o melhor ambiente para o banco de dados MySQL, mas aí, novamente falando sobre nuvens, hoje em dia, a gente usa muito a nuvem para criar uma instância do MySQL.
+
+[08:22] E aí, quando a gente fala de nuvem, da mesma maneira que a gente não precisa mais estar se preocupando em configurações de backup de ambiente, também performance, a gente não se preocupa mais, porque a gente tem dentro da configuração do MySQL na nuvem, seja ela na Amazon, na Azure ou na Google, você tem configurações de recursos de hardware que você vai reservar para o seu banco de dados MySQL.
+
+[08:55] E aí, você consegue em maneira lógica, ir aumentando esses recursos, na medida em que seu banco vai sendo usado e aí, internamente, se eu estou usando RAID, quanto te RAM, se é RAID 0, RAID 1, RAID 5, isso tudo é transparente para mim, que na parametrização da nuvem está pedindo para que aquele MySQL utilize mais recursos.
+
+[09:25] Então são esses comentários que eu gostaria de falar sobre a parte de tuning do MySQL, no que diz respeito a hardware. Valeu.
+
+
+-----------------------
+
+Mecanismo de armazenamento  MyISAM
+
+Transcrição
+[00:00] Vamos falar um pouquinho sobre mecanismos de armazenamento, esses mecanismos de armazenamento que existem no MySQL, são um dos recursos mais exclusivos do banco de dados, ele tem a ver com a forma com que o dado é guardado dentro das tabelas e o MySQL disponibiliza cerca de 20 diferentes tipos de mecanismos de armazenamento.
+
+[00:31] Então, como eu falei, ele é um mecanismo que gerencia a forma com que o dado é gravado em tabelas e a gente pode ter num mesmo banco de dados, diferentes tipos de mecanismos diferentes, como ele é aplicado a nível de tabela, as vezes a gente confunde muito o mecanismo de armazenamento com um tipo de tabela.
+
+[00:57] A gente pode chamar assim mesmo, quando a gente se refere a um mecanismo de armazenamento, na verdade, nós estamos falando de um tipo de tabela diferente do meu bando de dados.
+
+[01:08] Nas instruções de criação de tabela e de alteração de tabela, respectivamente os create tables e os alter tables, nós temos uma opção chamada engine, onde eu posso definir ou alterar o mecanismo de armazenamento que aquela tabela respectiva vai ter.
+
+[01:33] Uma outra característica interessante é que o mecanismo de armazenamento da tabela, ela está... não está associada com a arquitetura interna do MySQL, separando, justamente a forma com que eu tenho o (core) do banco de dados, com a forma com que eu vou armazenar a informação dentro da tabela.
+
+[02:02] Apesar de a gente ter esses 20 diferentes tipos de mecanismos de armazenamento, normalmente a gente trabalha com três principais, é o MyISAM, o InnoDB e o MEMORY. Vamos falar então um pouquinho do que que é o MyISAM.
+
+[02:23] O MyISAM, ele é, na verdade, o mecanismo padrão do MySQL, inclusive, as tabelas internas do MySQL são armazenadas usando MyISAM. Ele é um mecanismo bem confiável e ele herdou do mecanismo original, que foi implementado nas primeiras versões do MySQL, que era o mecanismo chamado de ISAM.
+
+[02:54] E a partir da versão, crio que 3.2 do MySQL, eles substituíram o padrão original ISAM, para o MyISAM, qual é a característica principal do mecanismo MyISAM? Ele não é um mecanismo puramente transacional, ele não implementa mecanismos de bloqueio dos registros dentro das tabelas.
+
+[03:25] O tipo de bloqueio que o MyISAM faz quando uma tabela está sendo atualizada, é um (lock) na tabela como um todo, isso permite com que a tabela seja muito mais rápida, se eu quiser, por exemplo, usá-la para efetuar somente leituras, mas aí, você tem um problema.
+
+[03:49] Se você tiver muita gravação simultânea, por diferentes usuários, diferentes sessões dentro do banco, como esse controle não é tão específico, a gente pode ter problemas usando tabelas MyISAM, por isso nós temos que tomar cuidado.
+
+[04:11] Então, algumas características específicas do MyISAM, para a gente decidir que tipo de forma de tabela a gente vai utilizar, por exemplo... Então, se eu tiver uma tabela que não vai ter muitas transações, eu posso usar MyISAM.
+
+[04:29] O MyISAM tem uma característica que a chave estrangeira não suporta o tipo FULLTEXT, que é um tipo de dado específico da tabela. Quando a gente cria um cache de dados ou um cache de índice, a gente nunca pode se referenciar a ele através do nome.
+
+[04:49] Nós temos uma vantagem que o MyISAM implementa dois tipos de forma de índice, que é o HASH e o BTREE, a gente vai falar um pouquinho sobre eles mais a frente, como eu já falei, o MyISAM, ele implementa bloqueio a nível de tabela, isso faz com que a atividade de leitura seja muito rápida, quando você usa o MyISAM.
+
+[05:10] Então ela é muito específica para bancos de dados, que nós chamamos de Data Warehouse, ou seja, bancos de dados gerenciais de consulta e internamente, os dados que são armazenados dentro das tabelas do MyISAM, já são automaticamente armazenados de forma compacta, melhorando o tamanho do banco de dados, quando eu tenho muita informação.
+
+[05:38] Lembra que a gente falou sobre variáveis de ambiente? Existe algumas variáveis de ambiente que são diretamente ligadas ao MyISAM. A primeira variável é o key_buffer_size, o key_buffer_size, ele determina, esse parâmetro, o tamanho de cache que a gente vai usar para armazenar os índices do MyISAM.
+
+[06:07] Dependendo do sistema operacional, se eu estiver usando 32 bits ou 64 bits, esse padrão pode ir desde 8MB, até 4GB. Um outro parâmetro importante é o concurrent_insert, é outro parâmetro que a gente pode estar especificando lá no my.cnf ou no my.ini, que é o arquivo de inicialização do MySQL.
+
+[06:36] Esse parâmetro determina o comportamento das inserções concorrentes dentro de uma tabela MyISAM. Existe uma variável chamada: intervalo de dados, que é uma espera que MySQL faz entre a inserção de um dado e de outro dado. Se essa variável concurrent_insert for igual a 1, você consegue fazer inserções simultâneas, sem intervalo de dados.
+
+[07:06] Se a configuração for igual a 0, a gente desativa as inserções simultâneas, ou seja, uma inserção sempre vai esperar a tabela ser liberada para funcionar e quando tiver a configuração número 2, eu permito a inserção simultâneas com um intervalo de dados ativado.
+
+[07:28] Outra variável é a delay_key_write, a gente usa essa variável para criar um atraso entre a atualização dos índices e o momento que a tabela é fechada, por exemplo, quando eu faço uma inserção de dados, se eu usar o delay_key_write, o MySQL vai esperar todas as inserções serem efetuadas, para depois fazer uma atualização dos índices.
+
+[08:02] Isso cria, claro, uma melhor consistência no dado dentro do banco de dados, porém, isso cria uma lentidão um pouco maior no momento da atualização da informação. O padrão do MyISAM é essa variável delay_key_write, com o valor igual a 1.
+
+[08:28] Então, quando eu crio automaticamente uma tabela do tipo MyISAM, automaticamente o delay_key_write vai estar ativado, se eu quiser melhorar um pouco a performance dos inserts, eu devo ir lá na configuração e colocar essa variável delay_key_write como off.
+
+[08:50] Nós temos também a variável max_write_lock_count, essa variável de ambiente, ela determina quantas gravações em uma tabela vão ter precedências às leituras, ou seja, quando tiver gravações e leituras ao mesmo tempo, qual vai ser a prioridade da inclusão de dados na tabela, em relação às leituras.
+
+[09:28] E a gente tem uma outra variável, que é a preload_buffer_size, essa variável, ela determina o tamanho do buffer que vai ser usado no pré carregamento do índice de caches de chaves da tabela. O padrão dessa variável, normalmente, é 32KB.
+
+[09:55] Claro que o uso dessas variáveis de ambiente vai vir com o tempo, na medida em que o administrador do MySQL começa a entender melhor o seu ambiente, entente melhor os mecanismos de MyISAM e pode mexer com essas variáveis.
+
+[10:15] Mas a minha experiência diz o seguinte, use sempre o padrão, quando você cria uma tabela do tipo MyISAM, você deve apenas levar em consideração se o seu caso, ele está dentro dessa opções aqui, específicas, para determinar se você vai usar o MyISAM ou não como tipo de tabela.
+
+[10:44] O que nós estamos vendo aqui, são três utilitários que existem dentro do MySQL, para a gente poder manipular tabelas do tipo MyISAM. A gente tem um primeiro aplicativo que é o myisamchk, ele é usado para a gente poder analisar, otimizar e reparar tabelas MyISAM, pode ser que as tabelas estejam mal construídas, algum problema no seu armazenamento interno.
+
+[11:16] Então o myisamchk, reconstrói essas tabelas. O myisampack, ele é usado para a gente poder criar tabelas MyISAM compactadas, que vão ser só usadas para leitura, nada mais. São tabelas que a gente, durante o uso do aplicativo, a gente cria elas, coloca informação e elas não vão poder sofrer nenhum tipo de insert.
+
+[11:43] Claro que essas tabelas vão ter mecanismos de controle de escrita, praticamente nulos, praticamente inexistentes, fazendo com que a performance da leitura seja muito rápida.
+
+[11:57] E um outro aplicativo é o myisam_ftdump, que é usado para a gente poder exibir informações sobre os campos do tipo texto, que eu tenho dentro do MyISAM, ele fornece uma informação mais completa sobre esses campos.
+
+[12:14] Então, tá, era mais ou menos isso que eu gostaria de falar para vocês, sobre os tipos de tabela MyISAM. Valeu.
+
+
+-------------------
+
+InnoDB e Memory
+PRÓXIMA ATIVIDADE
+
+Play Video
+Transcrição
+[00:00] Agora vamos falar do InnoDB. O InnoDB é um mecanismo de armazenamento usando quando eu vou realmente ter um banco de dados transacional.
+
+[00:12] Quando eu falo banco de dados transacional, eu estou imaginando um banco de dados onde eu tenho uma aplicação, onde eu tenho dezenas, centenas ou milhares de usuários fazendo inclusões, alterações, exclusões e consulta de dados naquela banco ao mesmo tempo.
+
+[00:32] É uma forma diferente, quando eu falo de bancos de dados gerenciais, onde durante um período, eu faço uma carga grande desse banco e depois os usuários apenas consultam as informações. Nesse caso, o MyISAM, ele é mais direcionado.
+
+[00:51] Já para bancos de dados com várias transações, a gente aconselha usar o mecanismo de armazenamento InnoDB e foi o InnoDB que trouxe para o MySQL o suporte a transações relacionais, até versões anteriores, quando não utilizavam esse tipo de mecanismo, o MySQL não era full transacional.
+
+[01:17] Então, claro, algumas características do mecanismo de armazenamento InnoDB. Claro, suporte completo ao banco de dados transacional, o bloqueio da tabela durante uma atualização, ele é feito a nível de linha.
+
+[01:38] Ou seja, quando eu atualizo um informação, aquela linha está bloqueada, mas a tabela toda está liberada para sofrer outras alterações e também tem suporte completo à chaves estrangeiras.
+
+[01:56] Em termos de índice, o InnoDB só utiliza índice do tipo BTREE, eu ainda não estou explicando para vocês o que é um índice e quais são os seus tipos, mas a gente já vai adiantando que InnoDB só suporta BTREE.
+
+[02:13] Para a gente configurar um cache de buffer, para poder ele agilizar os seus processos internos, no caso de um banco de dados InnoDB, a configuração do cache, tanto para o banco, quanto para o índice, pode ser feita de formas separas, diferente, por exemplo, do MyISAM.
+
+[02:35] E eu consigo, através de bancos InnoDB, fazer um backup do banco sem bloqueá-lo, sem precisar tirar ele do ar para fazer isso. Nós temos algumas variáveis de ambiente, as três primeiras, elas estão relacionadas com as tabelas.
+
+[02:59] A gente tem o Innodb_data_file_path, que determina o caminho dentro do sistema operacional, onde as informações serão armazenadas e o tamanho desses arquivos máximos. O InnoDB, ele armazena as informações através de um arquivo que vai crescendo e depois quando ele acaba, ele vai criando um outro arquivo com sufixo 1, 2, 3 e assim por diante.
+
+[03:30] O local desse arquivo e o tamanho máximo de cada parte do arquivo é determinado através desse parâmetro. Um outro parâmetro é o innobd_data_home_dir, como o próprio nome diz, ele é feito para dizer qual é o caminho comum de diretório de todos os arquivos InnoDB.
+
+[03:54] Se eu especificar esse cara, ele vai gravar tudo dentro desse diretório, diferente do default, o default, o padrão, ele vai gravar tudo dentro de um diretório chamado MySQL Data, que é o padrão do armazenamento de dados de um banco de dados MySQL.
+
+[04:18] A gente tem o Innodb_file_per_table, a gente pode especificar cada tabela de armazenamento InnoDB, os arquivos que armazenam as informações, eles tem uma extensão “.ibd”. E aí, quando a gente usa esse parâmetro Innodb_file_per_table, a gente consegue separar o armazenamento dos dados, com os índices.
+
+[04:55] O padrão é que a gente armazene essas informações num espaço compartilhado, com essa variável de ambiente, a gente consegue separar o armazenamento do índice e também do dado. Já as três últimas variáveis que estão aqui nesse slide, ele diz respeito a variáveis que estão relacionadas com performance.
+
+[05:20] A primeira variável, que é a Innobd_buffer_pool_size, ela determina o tamanho de buffer que o mecanismo de armazenamento InnoDB, vai estar usando para armazenar dados e índices em cache. Quando a gente utiliza cache, a gente está falando de coisas que ficam em memória que melhoram a performance.
+
+[05:43] Já a variável de ambiente Innodb_flush_log_at_trx_commit, nome grande, ela vai configurar a frequência com que o buffer de log é liberado para o disco. Na medida em que a gente vai usando o banco, esse buffer de log vai crescendo e de tempos em tempos, ele é descarregado para o disco rígido.
+
+[06:11] Então essa variável vai dizer a frequência com que isso vai ser feito. Finalmente, a innodb_log_file_size, ele vai determinar o trabalho em bytes que cada um dos arquivos de log (InnoDB) vão ter. O padrão dessa variável, quando você não menciona nada, é ter um log de no máximo 5MB.
+
+[06:38] Essa variável vai dizer se o tamanho desse log vai ser maior ou menor por arquivo, isso não significa que o log terá 5MB ou mais ou menos, significa que cada arquivo de log, será criado de 5 em 5MB.
+
+[07:01] Vamos agora falar de outro mecanismo de armazenamento, que é o Memory e como o próprio nome diz, o Memory, ele é um mecanismo de armazenamento que cria tabelas penas na memória, quando eu falo memória, eu estou falando apenas na memória RAM.
+
+[07:24] E aí, claro, se a informação... se a tabela está lá na memória RAM, isso significa que o acesso a ela é super rápido, porém tem uma desvantagem, essa informação, ela não fica armazenada no disco. Os dados, eles precisam ser sempre reinicializados quando o servidor é inicializado.
+
+[07:51] Ou seja, eu inicializei um servidor, as tabelas de Memory estão vazias, se eu for criar tabelas e colocar dados em memory, eles vão ficar lá até o servido ser reinicializado novamente. Se isso acontecer, se houver uma reinicialização, os dados são perdidos.
+
+[08:12] Nós temos algumas características dos bancos em memory, das tabelas em memory. Não tem chave estrangeira. É claro, o ato de ler e escrever dados nas tabelas memory são muito rápidos.
+
+[08:31] Claro, porque a informação está em memória e o bloqueio é muito parecido com o MyISAM, ou seja, quando eu vou bloquear algum registro, porque eu estou atualizando ele, eu bloqueio a tabela toda.
+
+[08:48] Em termos de índices, o Memory, ele também utiliza os mecanismos de HASH e de BTREE, mas o padrão é o HASH, novamente, índices eu vou falar mais a frente o que significa.
+
+[09:06] Mas a gente já viu, tanto nesse vídeo, quanto no anterior, que o padrão MyISAM, InnoDB e Memory, possuem alguns tipos de índices que são suportados e alguns tipos de índices que são padrões. As tabelas de Memory, elas têm uma característica específica para armazenar o dado.
+
+[09:32] Eles usam um formato que no MySQL, nós chamamos de formato de linha de comprimento fixo, então, por causa disso, eu não posso ter tipos de campos muito grandes, como por exemplo, tipos Blob ou tipos Text, ou seja, campos que são muito... são campos que tem tamanho muito grande, que armazenam muitos caracteres.
+
+[09:58] Então era isso que eu queria falar para vocês sobre as tabelas do tipo InnoDB e Memory. Valeu.
+
+------------------
+
+Realizando o backup com o mysqldump
+PRÓXIMA ATIVIDADE
+
+Play Video
+Transcrição
+[00:00] Vamos falar um pouquinho de uma coisa muito importante, quando a gente fala de administração de um banco de dados que é o backup.
+
+[00:09] O backup nada mais é do que uma cópia do meu banco de dados, que eu faço periodicamente para poder depois recuperar num momento futuro, caso, por exemplo, eu tenha algum problema na minha base de dados ou algum processo que faz... acaba destruindo, por exemplo, a base de dados, algum processo errado que o analista executou.
+
+[00:40] Então eu preciso voltar o estado do banco a um determinado momento, então a gente pega o backup que foi tirado periodicamente, digamos assim, toda a meia noite eu tiro um backup e aí, eu pego e ele recupero. E aí, eu tenho duas maneiras principais de se fazer um backup.
+
+[01:05] Uma é o que nós chamamos do backup lógico, o backup lógico, ele exporta todas as estruturas, tabelas, dados, rotinas que estão armazenadas num banco de dados, para um script de instruções SQL, que depois, esse script pode ser executado para recriar o estado do banco de dados.
+
+[01:36] O backup lógico, ele tem a vantagem que pode ser manipulado externamente, antes de eu recuperar as informações, ou seja, eu posso abrir aquele script.sql e editar os comandos. Já o backup lógico tem uma desvantagem, ele acaba sendo muito lento, já que eu tenho que executar comando a comando para poder recuperar o meu backup.
+
+[02:05] O outro tipo de backup é o backup físico, o backup físico é uma cópia que contém todos os arquivos de sistema, que o banco de dados usa para armazenar as suas entidades, ele representa o backup dos arquivos binários do disco, os arquivos que representam o banco de dados, que estão armazenados no HD do servidor.
+
+[02:32] Para tirar o backup físico é muito rápido, basta fazer uma cópia desses arquivos e a sua recuperação também, ela é mais rápida. Embora os arquivos do backup físico não sejam muito bem compactados, já que os arquivos binários originalmente, eu não consigo compactar muito essa informação.
+
+[02:58] Normalmente, o tamanho do backup físico é menor do que o tamanho do backup lógico, já que no backup lógico, eu tenho todos os comandos dentro de um script, enquanto que o backup físico, eu tenho o arquivo onde a informação está armazenado.
+
+[03:18] Normalmente a gente chama também os backup físicos de backup bruto. O MySQL tem um aplicativo chamado: Mysqldump, ela é a ferramenta que nós usamos para executar os backups lógicos.
+
+[03:41] Ele oferece uma variedade de opções para a gente incluir ou excluir banco de dados, selecionar dados específicos para o backup, fazer backup, por exemplo, somente do esquema, somente da estrutura ou somente dos dados, fazer backup de uma tabela específica, enfim.
+
+[04:05] Eu posso selecionar pelo Mysqldump tudo aquilo que eu quero utilizar para salvar dentro do meu backup. Então isso é um pouquinho da teoria que eu gostaria de falar para vocês sobre backup. Vamos fazer agora alguns exercícios práticos, tirando o backup, através do backup lógico, usando o mysqldump.
+
+[04:33] Então eu vou fazer o seguinte, vou lá no Workbench, tenho o meu Workbench aqui aberto e eu vou olhar esse banco de dados aqui, o sucos_vendas, que é um banco de dados que a gente recuperou no início desse treinamento, que nós vamos usar como banco de exemplo, para a gente fazer os nossos exercícios.
+
+[04:55] Eu vou fazer um backup desse banco, usando o Mysqldump. Eu vou vir aqui e vou abrir aqui uma linha de comando e eu vou para o diretório onde o Mysqldump está instalado, então ele está em Program Files, MySQL Server 8.0, bin.
+
+[05:28] E se eu digitar aqui Mysqldump, eu tenho o arquivo, claro que eu preciso colocar alguns parâmetros. Eu quero tirar o backup do banco de dados completo sucos_vendas.
+
+[05:45] Então eu coloco: Mysqldump -uroot, eu coloco bem junto mesmo do “-u” usuário, “-p” e dou um espaço, eu não coloco a senha, porque a senha vai ser requisitada quando eu rodar o comando, menos, menos, dois menos, databases e eu colocar o nome o database que eu quero tirar o backup, sucos_vendas.
+
+[06:19] E aí, eu coloco o sinal de maior e aonde eu vou salvar o arquivo de backup? Eu previamente, já criei aqui no meu computador um diretório chamado: C:\mysqladmin, esse nome pode ser como qualquer um.
+
+[06:39] Crie um diretório vazio na máquina de vocês, onde dentro desse diretório, a gente vai salvar tudo aquilo que a gente for fazer que exigir arquivos externos. Eu criei aqui no meu “C”, um diretório mysqladmin, mas vocês podem criar aonde vocês quiserem, com o nome que vocês quiserem, desde que utilize esse nome dentro dos comandos.
+
+[07:04] Então, voltando aqui, eu vou salvar o backup no C:\mysqladmin\ e vou colocar o nome de um arquivo, sucos_vendas_full.sql. Então está aqui, mysqldump, -uroot, -p vazio, a cláusula menos, menos databases, o nome da base, o sinal de maior e o arquivo externo.
+
+[07:44] O nome do arquivo pode ser qualquer um, não precisa ser obrigatoriamente extensão “.sql”, só que esse arquivo vai ser um arquivo texto, que depois, eu vou poder rodá-lo com um script e aí, (igual) a todos os scripts de linguagem sql., a gente coloca como “.sql”.
+
+[08:05] Vou executar. Vou dar “Enter”, ele vai me pedir a senha, coloquei aqui Root e aí, pronto, executou. Vamos olhar lá no diretório, então eu tenho aqui no diretório Mysqladmin, eu tenho esse arquivo sucos_vendas_full, sucos, underscore vendas, underscore full, “.sql”, vamos abrir esse arquivo com o editor de texto.
+
+[08:35] Então eu vou abri-lo aqui, então eu tenho aqui uma série de comandos, onde eu tenho o create database, onde eu crio aqui a base de dados sucos_vendas, eu dropo a tabela itens_notas_fiscais, depois eu crio a tabela. Aí, eu loco a tabela, ou seja, deixo a tabela fechada para escrita.
+
+[09:08] E aí, eu faço os comandos de insert, esses comandos de insert estão um do lado do outro, tem vários comandos de insert aqui. Esses comandos aqui, eu estou inserindo os dados que estavam na base de dados quando eu tirei o backup.
+
+[09:25] Então vocês imaginam, se eu tiver uma tabela de milhões, 10 milhões, 20 milhões de registros, ele vai escrever 20 milhões de linhas de insert. Claro que são inserts agrupados, mas isso vai ocupar espaço, esse arquivo “.sql”, vai ser um arquivo muito grande, que as vezes, nem com editor de texto, a gente consegue abrir.
+
+[09:52] Aí, eu tenho alguns comandos internos para setar variáveis internas, depois eu tenho a segunda tabela, notas fiscais, também tenho o comando create, tenho lá os inserts e assim por diante, ou seja, isso aqui foi criado automaticamente pelo meu processo de... por ter executado o Mysqldump.
+
+[10:23] Vamos voltar então aqui para o ambiente de prompt, eu falei para vocês que a gente pode pelo Mysqldump, poder especificar que tipo de entidade a gente quer fazer o backup.
+
+[10:40] Então, por exemplo, no comando que eu acabei de rodar, eu executei o backup, digamos assim, da base de dados toda, mas a gente pode executar um comando para fazer, por exemplo, o backup de apenas uma tabela. Então seria assim, mysqldump -uroot -p --, aí a cláusula é tables.
+
+[11:13] Não, na verdade, desculpa, primeiro eu especifico a base, databases sucos_vendas, aí, agora sim, --tables, coloco o nome da tabela, então eu vou escolher a tabela de notas fiscais.
+
+[11:34] E aí, eu coloco o sinal de menor e a saída, mysqladmin/sucos_vendas_ tab_notas_fiscais.sql, coloco aqui o root. Pronto, executei. Se eu olhar aqui, eu agora tenho um outro arquivo, note que esse arquivo é um pouco menor, porque claro, só tem informações de uma tabela e se eu abrir aqui ele com um editor de texto, eu só tenho aqui as informações de notas fiscais.
+
+[12:21] Eu posso, por exemplo, gerar de todo mundo, menos de uma tabela específica, então aqui, mysqldump -uroot -p –databases sucos_vendas. Aí, eu uso, por exemplo, o comando ingnore table. E aí, eu vou colocar aqui, por exemplo, sucos_vendas.notas_fiscais.
+
+[13:01] Quando eu estou me referenciando a uma tabela que eu vou ignorar, eu tenho que colocar o nome do banco, ponto, o nome da tabela, diferente quando eu quero somente aquela tabela. Quando eu quero só a tabela, eu coloquei aqui só o nome da tabela.
+
+[13:17] Quando eu quero ignorar, eu coloco o nome da base, ponto o nome da tabela. Vamos salvar no diretório mysqladmin\sucos_vendas_ig (ignore)tabnotas_fiscais.sql, root. Escrevi errado notas fiscais aqui, mas não importa, a gente vai salvar um arquivo externo.
+
+[13:55] Pronto, vamos voltar lá para o diretório, tem lá já um terceiro arquivo, só vou aqui renomear e colocar aqui: fiscais, para ficar certinho. E eu posso, por exemplo, se eu quiser, eu posso salvar apenas as informações de, por exemplo, de dados, quero ignorar, por exemplo, toda a informação a respeito da estrutura da tabela.
+
+[14:37] Então eu posso botar aqui mysqldump -uroot -p –databases sucos_vendas – no-create-db. Aí, ele já vai salvar um backup, lógico, que não criar base, -- no-create-info, não vai colocar as informações da base e por exemplo: --complete-insert, vou inserir todos os inserts das tabelas.
+
+[15:23] E aí, vou salvar isso no c:\mysqladmin\sucos_vendas_somente_inserts .sql, root. Foi. Se eu olhar o arquivo, tenho mais um quarto arquivo que... somente inserts, se eu olhar, note que eu não tenho comando de create, eu simplesmente entro na base e insiro as informações de todas as tabelas.
+
+[16:08] Eu poderia ficar aqui horas mostrando para vocês uma série de comandos que eu tenha para poder usar o Mysqldump numa série de parâmetros, mas a documentação do MySQL que eu tenho na internet, ela é bem detalhada e bem vasta, eu vou até mostrar aqui para vocês.
+
+[16:31] Se eu colocar aqui: https://dev.mysql.com/doc/refman – que é manual de referência – barra a versão, vou pegar aqui o inglês, mysqldump.html, eu acho que essa que é a URL. Eu tenho aqui todas as informações sobre o comando mysqldump.
+
+[17:19] Se a gente arrastar aqui para baixo, olha só, eu tenho lá um montão de parâmetros, olha, “--add-drop-database”, adiciona o drop database antes de criar o database; “--add-locks”, coloca o comando lock tables. Se eu passar aqui o mouse, tem uma gama de parâmetros para o comando Mysqldump.
+
+[17:50] E é claro, a gente vai consultar a documentação, quando a gente quiser fazer alguma coisa específica, “Poxa, eu quero fazer um backup que somente tenha dados, mas também (lock) tabelas”, então eu vou vir aqui e procurar uma combinação de parâmetros que me aquilo que eu estou interessado.
+
+ DISCUTIR NO FORUM
+PRÓXIMA ATIVIDADE
+
+ícone Administração do MySQL: segurança e otimização do banco Administração do MySQL: segurança e otimização do banco
+
+-----------------------
+
+Para fazer o backup por arquivos, efetuei os seguintes passos:
+
+Parei o serviço do MySQL
+Criei o diretório no computador
+Copiei todo o diretório Data para o novo diretório criado anteriormente
+Subi o serviço do MySQL
+Após estes passos, foram feitas mudanças na base, criadas novas bases, apagadas outras, e, quando recuperamos o backup para desfazer toda a alteração, não obtivemos sucesso.
+
+Onde foi o erro?
+O arquivo de configuração my.ini deve ser copiado para o backup e substituído quando o mesmo for recuperado.
+
+-----------------------
+
+Recuperando os backups
+PRÓXIMA ATIVIDADE
+
+Play Video
+Transcrição
+[00:00] Então, a gente já aprendeu a fazer backup usando o Mysqldump, usando o Workbench e copiando os arquivos fisicamente. Agora, a gente vai aprender a recuperar o backup, a gente vai primeiro recuperar o backup a partir do arquivo que foi gerado pelo Mysqldump.
+
+[00:22] Então, novamente, se eu abrir aqui aquele meu diretório, onde eu estou salvando todos os backup, eu vou estar utilizando... vamos ordenar aqui por data, esse cara aqui, o sucos_vendas_full.slq, que foi o arquivo que eu criei usando o Mysqldump, quando eu usei aquela propriedade –databases, ou seja, salvei toda a estrutura do banco.
+
+[00:57] Eu vou então aqui no Workbench, aqui em Schemas, vamos criar aqui um script novo e aí, eu vou apagar a minha base: “Drop Databases sucos_vendas, vamos matar ela. Na verdade, é “Database”, Databases é o parâmetro que a gente usa lá no Mysqldump, é –databases, no plural, no Drop é database.
+
+[01:39] Isso é normal, eu... as vezes a gente acaba confundindo os parâmetros, mas vamos lá, “Drop Database sucos_vendas”, então se eu vier aqui, eu não tenho mais um sucos_vendas, eu agora vou criar um novo, vou criar aqui o banco sucos_vendas.
+
+[02:08] Então, pronto, eu tenho o meu sucos_vendas criado, porém vazio, sem nada. Então vamos lá, voltando aqui ao comando prompt, para eu recuperar os dados, eu vou rodar aquele script “.sql”, que tem todos os comandos para recuperar a informação.
+
+[02:30] Então é como se eu tivesse feito um script manual e fosse executar ele através do MySQL, eu poderia, inclusive... é porque ele é muito grande, eu poderia inclusive, se quisesse, copiar, digamos assim, esse script aqui, copiar e não sei... vir aqui no Workbench e colar e rodar ele aqui.
+
+[03:01] Se eu rodar ele aqui, eu vou fazer todo o processo, só que claro, esse arquivo “.sql”, como tem toda a informação da base, ele é muito grande e aí, rodar os scripts de dentro do Workbench, pelo editor de scripts, não é muito legal fazer isso, quando eu tenho milhões de linhas.
+
+[03:22] Então, eu vou apagar aqui, eu não vou fazer por aqui, não. Eu vou fazer por linha de comando, como é que eu faço isso? Através do comando MySQL, se eu clicar aqui MySQL, vou botar -uroot -p e colocar aqui a senha do root, eu estou aqui dentro do MySQL.
+
+[03:49] Se eu der aqui use sakita, é sakita mesmo o nome do banco? É sakila, use sakila, entrei na base sakila, se eu quiser aqui, vamos pegar uma tabela do sakila, actor, eu posso vir aqui e rodar: select * from actor. Está vendo? Eu estou dentro da interface do MySQL, através somente de linha de comando.
+
+[04:23] Muita gente está mais acostumada a administrar o MySQL pelo MySQL linha de comando, do que propriamente dentro do Workbench.
+
+[04:33] Eu prefiro o Workbench porque ele é gráfico, eu consigo ver os comandos, selecionar o comando que eu quero, quando eu gero resultado, eu gero dentro de um grid, eu tenho algumas ferramentas de produtividade que me facilitam o desenvolvimento, o trabalho.
+
+[04:51] Linha de comando é mais para o pessoal das antigas, old school, que o pessoal está acostumado a trabalhar. Por esse MySQL que eu vou executar um script grande, que pode ter muitas linhas.
+
+[05:05] Então, eu vou dar um exit aqui, o exit sai do MySQL e vou chamar o MySQL de novo, mas vou fazer a seguinte coisa, eu vou chamar o MySQL passando o usuário e a senha e executando aquele script que foi salvo. Então é mysql -uroot -p, espaço e aí, agora, eu uso o comando menor.
+
+[05:34] Eu usei o comando maior, o símbolo maior quando eu quero jogar para fora do MySQL os dados para um script, o menor, eu estou jogando para dentro, então é como se... a direção da seta está mostrando, eu estou vindo de fora para dentro e aí, aqui eu vou colocar o nome daquele arquivo mysqladmin, vamos conferir lá o nome do arquivo, é sucos_vendas _full.sql.
+
+[06:16] Então ficou assim. MySQL, o usuário, a senha, a seta indicando o sentido em que os dados vão estar sendo transferidos e aí, o nome do arquivo: extensão MySQL. Cliquei, eu vou colocar a senha root, note que eu estou esperando um tempo e ele está, na verdade, executando todos os comandos. Acabou.
+
+[06:50] Eu agora, se eu vier aqui no Workbench, der aqui um Refresh no sucos_vendas, inicialmente... já até apareceu as tabelas, eu não precisava nem dar o Refresh, mesmo assim, eu vou dar u Refresh de novo e eu agora tenho aqui as informações recuperadas.
+
+[07:12] Então é assim que eu consigo recuperar os dados, através do comando MySQL, quando a minha origem é um arquivo lógico. Agora, vamos recuperar o backup, não de um arquivo “.sql” que foi gerado pelo Mysqldump e sim através daqueles dados que eu salvei naquele subdiretório que eu chamei até de Dados, esse diretório aqui.
+
+[07:38] Desculpe, eu chamei de backup sucos_vendas, onde eu tenho a estrutura completa dos dados, eu vou fazer isso então. A primeira coisa que eu vou fazer é parar, fazer um lock na base de dados, mas quando eu faço essa cópia, eu gosto de fazer uma coisa mais radical, eu gosto de derrubar o serviço do MySQL.
+
+[08:06] Eu vou deixar o MySQL desligado, então eu vou fazer o seguinte, vamos fazer o seguinte exemplo, antes de continuar, eu vou dar o botão direito do mouse e vou dar um drop na base sucos_vendas. Então, note, a minha base sucos_vendas, ela não existe mais.
+
+[08:28] Eu fecha o Workbench e eu vou aqui no serviço do Windows e vou procurar o serviço do MySQL, aqui, MySQL 8.0, vou parar esse serviço. Então aí, realmente ninguém mais vai entrar no MySQL nesse momento.
+
+[08:57] E aí, eu vou fazer o seguinte, aqui, dentro daquele meu diretório Dados, eu vou pegar o my.ini, eu vou copiar, vou lá naquele diretório C, Program Data, MySQL, MySQL Server 8.0, que é o diretório onde o MySQL espera encontrar a base de dados, eu vou colar e vou fazer a mesma coisa com o diretório Data, vou copiar e vou colar.
+
+[09:37] Ele talvez diga que vai substituir alguns arquivos, tudo bem, vamos substituir. Já fiz a cópia dos arquivos fisicamente, então eu volto lá para o meu serviço, vou em inicializar e agora, vamos abrir o Workbench de novo. Vou entrar na minha conexão, vou colocar aqui a senha do usuário root, vou salvar ele, para não precisar mais.
+
+[10:16] Note, eu entrei agora e a base sucos_vendas apareceu novamente, que eu tinha apago antes de copiar o backup, então eu tenho a minha base aqui recuperada. Então, essa é uma forma, é a segunda forma de eu poder recuperar o backup, quando eu quero copiar fisicamente os arquivos que foram salvos também, através de uma cópia física.
+
+[10:42] É esse tipo de cópia que quando eu faço, ela aparentemente vai funcionar, mas pode ser que quando eu acessar alguma tabela dessa aqui, eu vá encontrar algum problema de algum dado corrompido, mas só vou descobrir isso quando ou eu for acessar uma coluna ou quando eu vou, por exemplo, acessar aqui... vamos pegar aqui um Select, quando eu for... Vamos lá de novo.
+
+[11:17] Send to, aqui, quando eu for, por exemplo, executar um Select. Então, só nesse momento é que eu vou descobrir que há um problema de dado corrompido. Aí, eu uso o arquivo script “.sql”, que eu salvei pelo Mysqldump, para complementar a recuperação do backup, através da cópia dos arquivos.
+
+[11:41] Ficou claro para vocês? Então é isso aí. Valeu.
+
+
+-------------------
+
+Nesta aula, aprendemos:
+
+A criar e apagar bases de dados
+Como realizar o backup através do mysqldump
+A fazer o backup copiando toda a estrutura de dados para outro diretório
+A recuperar o backup usando o a linha de comando do MySQL ou copiando de volta a estrutura de arquivos.
+
+------------------
+
+Nesta aula, aprendemos:
+
+O que é um índice
+Como funciona os algoritmos de Hash e BTree
+Como analisar um plano de execução
+Como o índice melhora o plano de execução
+Que as chaves primárias e estrangeiras criam índices e ajudam a melhorar o plano de execução
+A usar a ferramenta mysqlslap
+
+------------------
+
+Nesta aula, aprendemos:
+
+A criar usuários administradores e a remover o usuário root
+Como criar um usuário com privilégios para acesso normal (sem ser administrador)
+Como criar um usuário que só pode ler os dados
+Como criar um usuário que somente executa backups
+A fazer a criação dos usuários pela caixa de diálogo do Workbench e via SQL
+Como limitar o acesso do usuário pelo IP
+A limitar o acesso por banco e por tabela
+Como revogarr os privilégios

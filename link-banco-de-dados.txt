@@ -1,0 +1,92 @@
+##### BANCO DE DADOS #####
+
+## Links de Estudos ##
+
+https://blog.betrybe.com/sql/sql-like/
+
+https://blog.betrybe.com/sql/sql-delete/
+
+https://blog.betrybe.com/sql/sql-join/
+
+https://www.w3schools.com/sql/sql_exercises.asp
+
+https://www.devmedia.com.br/indices-fulltext-no-mysql/7631
+
+https://www.devmedia.com.br/sql-select-guia-para-iniciantes/29530
+
+https://blog.betrybe.com/tecnologia/acid-porque-usar/
+
+https://blog.betrybe.com/sql/
+
+https://pt.stackoverflow.com/questions/334701/mysql-comando-alter-table-diferença-de-modify-e-change
+
+https://www.w3schools.com/sql/sql_alter.asp
+
+https://www.devmedia.com.br/sql-aprenda-a-utilizar-a-chave-primaria-e-a-chave-estrangeira/37636
+
+https://sqliteonline.com/
+
+https://pt.stackoverflow.com/questions/257526/update-em-todos-os-registros-alterando-número-do-autoincrement
+
+https://stackoverflow.com/questions/688582/what-is-the-difference-between-int-and-integer-in-mysql-5-0
+
+https://www.w3schools.com/sql/sql_alter.asp
+
+https://www.w3schools.com/sql/sql_join.asp
+
+https://www.w3schools.com/sql/sql_insert.asp
+
+https://www.devmedia.com.br/sql-sum-somando-os-valores-de-uma-coluna/43489
+
+https://blog.betrybe.com/sql/sql-like/
+
+https://www.ime.usp.br/~andrers/aulas/bd2005-1/aula4.html
+
+https://www.google.com/amp/s/www.diegomacedo.com.br/sistema-de-gerenciamento-de-banco-de-dados-cliente-servidor/amp/
+
+https://blog.xpeducacao.com.br/tipos-de-banco-de-dados/
+
+https://www.devmedia.com.br/amp/mer-e-der-modelagem-de-bancos-de-dados/14332
+
+https://www.google.com/amp/s/www.devmedia.com.br/amp/conceitos-fundamentais-de-banco-de-dados/1649
+
+https://www.devmedia.com.br/sql-sum-somando-os-valores-de-uma-coluna/43489
+ 
+https://www.devmedia.com.br/sql-select-guia-para-iniciantes/29530
+ 
+https://www.w3schools.com/mysql/trymysql.asp?filename=trysql_editor
+ 
+https://www.devmedia.com.br/sql-aprenda-a-utilizar-a-chave-primaria-e-a-chave-estrangeira/37636
+ 
+https://www.devmedia.com.br/primeiros-passos-no-mysql/28438
+ 
+https://www.w3schools.com/mysql/mysql_editor.asp
+ 
+https://www.mycompiler.io/new/mysql
+ 
+https://www.programiz.com/sql/online-compiler/
+ 
+https://paiza.io/projects/QrMruKP8t2E7_4hPafSeiw?language=mysql
+ 
+https://onecompiler.com/mysql
+
+## Link para Download do MySQL ##
+
+Clique no link http://www.mysql.com/downloads/mysql/ para abrir o recurso.
+
+Link para Download do PostgreSQL
+
+https://www.postgresql.org/download/
+
+Link para Download Microsoft SQL Server
+
+https://www.microsoft.com/pt-br/sql-server/sql-server-downloads
+
+Link para Download MariaDB
+
+https://mariadb.org/download/
+
+Link: Software DIA
+
+Clique o link http://dia-installer.de/ para abrir o recurso.
+
