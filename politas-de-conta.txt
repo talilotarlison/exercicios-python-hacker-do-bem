@@ -1,0 +1,9 @@
+As diretrizes e regras estabelecidas para controlar o acesso e o uso de contas de usuário são conhecidas como **Políticas de Contas**. Essas políticas definem os requisitos de segurança relacionados a senhas, práticas de autenticação e outras medidas para proteger as contas de usuário. Alguns aspectos importantes das políticas de contas incluem:
+
+1. **Requisitos de senhas**: As políticas de contas geralmente especificam requisitos para senhas, como a necessidade de senhas complexas que misturem letras maiúsculas e minúsculas, números e caracteres especiais. Além disso, elas podem exigir que as senhas sejam alteradas periodicamente para aumentar a segurança².
+
+2. **Práticas de autenticação**: As políticas de contas também podem abordar práticas de autenticação, como o uso de autenticação multifator (MFA) ou biometria para verificar a identidade dos usuários. Essas práticas ajudam a proteger as contas contra acesso não autorizado.
+
+3. **Término de contas**: As políticas de contas também definem procedimentos para o término de contas de usuário, seja por desligamento de funcionários, transferências ou outras razões. Isso inclui revogar o acesso a sistemas e recursos quando uma conta é desativada.
+
+Portanto, a resposta correta é a alternativa **d - Políticas de contas**. Elas são essenciais para manter a segurança e a integridade das contas de usuário em uma organização¹⁵. 😊
