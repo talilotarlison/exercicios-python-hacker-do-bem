@@ -1,0 +1,376 @@
+Alguns dos principais comandos do Linux
+Alguns dos principais comandos do Linux usados no dia a dia do desenvolvedor.
+
+A lista abaixo trata-se de breves resumos sobre a utilização de cada um desses principais comandos do Linux.
+
+cd
+O comando cd tem como finalidade, mudar o diretório atual de trabalho (isto é, o diretório em que se está) para uma outra especificada. Ele é um comando frequentemente implementado no próprio interpretador de comandos, ou seja, não é uma extensão mas sim um comando nativo da própria interface de linha de comandos.
+
+cp
+O comando cp é um comando dos sistemas operacionais Unix usado para copiar arquivos e diretórios. O comando possui três modos de operação, definido pelos tipos de argumentos passados ao programa: copiar um arquivo para outro arquivo, copiar um ou mais arquivos para um diretório, ou copiar diretórios inteiros para outro diretório.
+
+ls
+O comando ls (derivado da palavra inglesa list) é um comando usado para listar arquivos e diretórios. Sua função é semelhante ao comando dir do MS-DOS da Microsoft.
+
+date
+O comando date permite ver/modificar a Data e Hora do Sistema. Lembrando que você precisa estar logado como usuário root para modificar a data e hora.
+
+cal
+O cal é um comando dos sistemas operacionais Unix que imprime o calendário do mês ou do ano dado. Se o usuário não especificar as opções de linha de comando, cal vai imprimir um calendário do mês atual.
+
+apropos
+apropos é um comando dos sistemas operacionais Unix que mostra informações sobre um assunto a partir de um banco de dados. Esse comando usa o mesmo banco do comando whatis.
+
+exit
+exit é um comando dos sistemas operacionais Unix, e MS-DOS e linguagens de script. O comando faz com que o shell ou programa finalize.
+
+ssh
+O ssh (secure shell) é normalmente usado para login em uma máquina remota e execução de comandos, mas também suporta tunelamento, redirecionamento de portas TCP e conexões X11. Ele pode transferir arquivos usando os protocolos SSH File Transfer Protocol (SFTP) ou secure copy (SCP). O ssh utiliza o modelo cliente-servidor.
+
+A porta TCP 22 é usada para conectar servidores ssh.
+
+mkdir
+O comando mkdir (make directory) é usado nos sistemas operacionais Unix para criar novos diretórios.
+O comando mkdir pode ser usado também para criar um caminho completo.
+
+mv
+O comando mv (move) dos sistemas operacionais Unix é usado para mover e renomear um ou mais arquivos ou diretórios de um lugar para outro. Ou seja, ele copia e modifica o caminho do arquivo original para o caminho desejado e então apaga o arquivo original (assim sendo possível renomear e mudar o diretório de um arquivo simultaneamente).
+
+pwd
+O pwd (print working directory) é um comando que imprime o nome do diretório local em uma interface de linha de comando. Este comando é encontrado nos sistemas operacionais Unix.
+
+rm
+O comando rm dos sistemas operacionais Unix é usado para apagar arquivos. Ele é uma forma curta de se referir a remove (remover), é semelhante ao del no MS-DOS. É requerido muito cuidado com o comando rm* pois apaga tudo sem confirmação por padrão.
+
+rmdir
+O comando rmdir (remove directory) é usado nos sistemas operacionais Unix e DOS para remover diretórios vazios. O diretório tem que estar vazio antes de ser excluído.
+
+cat O comando cat, dos sistemas operacionais Unix é usado para unir, criar e exibir arquivos. O nome remete a "concatenate" ("concatenar" em inglês). Em geral é usado desta maneira para exibir o conteúdo de um arquivo na saída padrão.
+
+file O comando file é usado para determinar o tipo de dados contido em um arquivo (ou o tipo de arquivo).
+
+clear O clear é um comando que é usado para limpar o conteúdo da tela de um terminal virtual. O comando não necessita de parâmetros, ele utiliza variáveis do ambiente de trabalho atual para determinar como limpar a tela.
+
+man O man é o comando do sistema Unix que exibe, de forma adequada, as páginas de manual do Unix, ou man pages, que são pequenos arquivos de ajuda.
+
+who
+who (quem?) é um comando Unix que gera uma lista contendo informações sobre cada usuário que está ativo no sistema. As informações exibidas para cada usuário são: nome de usuário, terminal, data e hora de login.
+
+wc
+o wc é um comando usado para contar palavras (do inglês, word count) e, por extensão, contar bytes e linhas.
+
+whoami
+whoami (quem sou eu?) é um comando Unix que permite mostrar o usuário actual do sistema, mesmo que tenha permissões acrescida com o su.
+
+touch O comando touch muda a data e hora que um arquivo foi criado. Também pode ser usado para criar arquivos vazios. Caso o touch seja usado com arquivos que não existam, por padrão ele criará estes arquivos.
+
+locate locate é um comando dos sistemas operacionais Unix que localiza arquivos em um banco de dados. Esses dados devem ser atualizados periodicamente usando o comando updatedb.
+
+find find é um comando de busca de arquivos utilizado em sistemas operativos Unix e derivados. Ele procura por um ou mais diretórios na árvore da estrutura do sistema de arquivos, localizando arquivos baseados em um critério estabelecido pelo usuário. Ele também suporta expressões regulares, e pode ser usado para aplicar um filtro especifico em vários arquivos.
+
+grep grep é um comando de sistemas Unix/Linux que faz buscas no conteúdo dos arquivos (ou input) procurando linhas que encontrem a expressão regular mencionada. Todas as linhas encontradas são mostradas na saída padrão (geralmente o monitor).
+
+sudo O comando sudo permite a usuários comuns obter privilégios de outro usuário, em geral o super usuário, para executar tarefas específicas dentro do sistema de maneira segura e controlável pelo administrador. O nome é uma forma abreviada de se referir a substitute user do (fazer substituição do usuário) ou super user do (fazer como super usuário).
+
+df O comando df exibe informações sobre espaço, livre e ocupado, das partições do sistema.
+
+du O comando du dos sistemas operacionais Unix é usado para obter informações sobre o espaço ocupado por arquivos de um diretório. É uma forma abreviada de se referir a disk usage (uso do disco).
+
+head O comando head é usado para exibir apenas as primeiras linhas de um arquivo texto.
+
+tail O comando tail é usado para exibir apenas as últimas linhas de um arquivo texto. Em geral é usado para observar as últimas atualizações em arquivos de log.
+
+diff diff é um utilitário de comparação de arquivos que gera as diferenças entre dois arquivos. É normalmente usado para mostrar as mudanças entre uma versão de um arquivo e a versão anterior do mesmo arquivo. O diff mostra as alterações realizadas por linha para arquivos de texto.
+
+tar O comando tar usado para armazenar vários arquivos em um único, preservando informações como datas e permissões. O tar também consegue gravar a propriedade e as permissões dos arquivos.
+
+chmod O chmod (abreviação de change mode, em português: alterar modo) é o comando que pode alterar permissões de acesso de objetos do sistema (arquivos e diretórios) e sinalizações (flags) de modo especial.
+
+chown O comando chown da shell do sistema Unix (como é o caso o GNU/Linux) é usado para alterar o dono de um determinado ficheiro. O comando significa change owner (mudar o dono).
+
+jobs O comando jobs mostra os processos que estão parados ou rodando em segundo plano.
+
+kill O comando kill dos sistemas operacionais Unix é usado para enviar sinais a determinados processos em execução. Por padrão é enviado o sinal SIGTERM que requisita a finalização do processo, por isso o nome kill (matar).
+
+ping O ping é um utilitário que usa o protocolo ICMP para testar a conectividade entre equipamentos. É um comando disponível praticamente em todos os sistemas operacionais. Seu funcionamento consiste no envio de pacotes para o equipamento de destino e na "escuta" das respostas. Se o equipamento de destino estiver ativo, uma resposta é devolvida ao computador solicitante.
+
+wget O wget é um comando usado nos sistemas operacionais Linux que se caracteriza por oferecer benefícios no download de arquivos.
+
+uname O comando uname permite mostrar informações detalhadas sobre seu sistema Linux. Isso inclui o nome da máquina, do sistema operacional, do kernel e assim por diante.
+
+top O comando top permite mostrar uma lista de processos que estão em execução e o quanto de CPU cada processo está sendo consumido.
+
+history O history é um comando em sistemas operacionais Unix que exibe o histórico de comandos utilizados anteriormente.
+lista abaixo trata-se de breves resumos sobre a utilização de cada um desses principais comandos do Linux.
+
+cd
+O comando cd tem como finalidade, mudar o diretório atual de trabalho (isto é, o diretório em que se está) para uma outra especificada. Ele é um comando frequentemente implementado no próprio interpretador de comandos, ou seja, não é uma extensão mas sim um comando nativo da própria interface de linha de comandos.
+
+cp
+O comando cp é um comando dos sistemas operacionais Unix usado para copiar arquivos e diretórios. O comando possui três modos de operação, definido pelos tipos de argumentos passados ao programa: copiar um arquivo para outro arquivo, copiar um ou mais arquivos para um diretório, ou copiar diretórios inteiros para outro diretório.
+
+ls
+O comando ls (derivado da palavra inglesa list) é um comando usado para listar arquivos e diretórios. Sua função é semelhante ao comando dir do MS-DOS da Microsoft.
+
+date
+O comando date permite ver/modificar a Data e Hora do Sistema. Lembrando que você precisa estar logado como usuário root para modificar a data e hora.
+
+cal
+O cal é um comando dos sistemas operacionais Unix que imprime o calendário do mês ou do ano dado. Se o usuário não especificar as opções de linha de comando, cal vai imprimir um calendário do mês atual.
+
+apropos
+apropos é um comando dos sistemas operacionais Unix que mostra informações sobre um assunto a partir de um banco de dados. Esse comando usa o mesmo banco do comando whatis.
+
+exit
+exit é um comando dos sistemas operacionais Unix, e MS-DOS e linguagens de script. O comando faz com que o shell ou programa finalize.
+
+ssh
+O ssh (secure shell) é normalmente usado para login em uma máquina remota e execução de comandos, mas também suporta tunelamento, redirecionamento de portas TCP e conexões X11. Ele pode transferir arquivos usando os protocolos SSH File Transfer Protocol (SFTP) ou secure copy (SCP). O ssh utiliza o modelo cliente-servidor.
+
+A porta TCP 22 é usada para conectar servidores ssh.
+
+mkdir
+O comando mkdir (make directory) é usado nos sistemas operacionais Unix para criar novos diretórios.
+O comando mkdir pode ser usado também para criar um caminho completo.
+
+mv
+O comando mv (move) dos sistemas operacionais Unix é usado para mover e renomear um ou mais arquivos ou diretórios de um lugar para outro. Ou seja, ele copia e modifica o caminho do arquivo original para o caminho desejado e então apaga o arquivo original (assim sendo possível renomear e mudar o diretório de um arquivo simultaneamente).
+
+pwd
+O pwd (print working directory) é um comando que imprime o nome do diretório local em uma interface de linha de comando. Este comando é encontrado nos sistemas operacionais Unix.
+
+rm
+O comando rm dos sistemas operacionais Unix é usado para apagar arquivos. Ele é uma forma curta de se referir a remove (remover), é semelhante ao del no MS-DOS. É requerido muito cuidado com o comando rm* pois apaga tudo sem confirmação por padrão.
+
+rmdir
+O comando rmdir (remove directory) é usado nos sistemas operacionais Unix e DOS para remover diretórios vazios. O diretório tem que estar vazio antes de ser excluído.
+
+cat O comando cat, dos sistemas operacionais Unix é usado para unir, criar e exibir arquivos. O nome remete a "concatenate" ("concatenar" em inglês). Em geral é usado desta maneira para exibir o conteúdo de um arquivo na saída padrão.
+
+file O comando file é usado para determinar o tipo de dados contido em um arquivo (ou o tipo de arquivo).
+
+clear O clear é um comando que é usado para limpar o conteúdo da tela de um terminal virtual. O comando não necessita de parâmetros, ele utiliza variáveis do ambiente de trabalho atual para determinar como limpar a tela.
+
+man O man é o comando do sistema Unix que exibe, de forma adequada, as páginas de manual do Unix, ou man pages, que são pequenos arquivos de ajuda.
+
+who
+who (quem?) é um comando Unix que gera uma lista contendo informações sobre cada usuário que está ativo no sistema. As informações exibidas para cada usuário são: nome de usuário, terminal, data e hora de login.
+
+wc
+o wc é um comando usado para contar palavras (do inglês, word count) e, por extensão, contar bytes e linhas.
+
+whoami
+whoami (quem sou eu?) é um comando Unix que permite mostrar o usuário actual do sistema, mesmo que tenha permissões acrescida com o su.
+
+touch O comando touch muda a data e hora que um arquivo foi criado. Também pode ser usado para criar arquivos vazios. Caso o touch seja usado com arquivos que não existam, por padrão ele criará estes arquivos.
+
+locate locate é um comando dos sistemas operacionais Unix que localiza arquivos em um banco de dados. Esses dados devem ser atualizados periodicamente usando o comando updatedb.
+
+find find é um comando de busca de arquivos utilizado em sistemas operativos Unix e derivados. Ele procura por um ou mais diretórios na árvore da estrutura do sistema de arquivos, localizando arquivos baseados em um critério estabelecido pelo usuário. Ele também suporta expressões regulares, e pode ser usado para aplicar um filtro especifico em vários arquivos.
+
+grep grep é um comando de sistemas Unix/Linux que faz buscas no conteúdo dos arquivos (ou input) procurando linhas que encontrem a expressão regular mencionada. Todas as linhas encontradas são mostradas na saída padrão (geralmente o monitor).
+
+sudo O comando sudo permite a usuários comuns obter privilégios de outro usuário, em geral o super usuário, para executar tarefas específicas dentro do sistema de maneira segura e controlável pelo administrador. O nome é uma forma abreviada de se referir a substitute user do (fazer substituição do usuário) ou super user do (fazer como super usuário).
+
+df O comando df exibe informações sobre espaço, livre e ocupado, das partições do sistema.
+
+du O comando du dos sistemas operacionais Unix é usado para obter informações sobre o espaço ocupado por arquivos de um diretório. É uma forma abreviada de se referir a disk usage (uso do disco).
+
+head O comando head é usado para exibir apenas as primeiras linhas de um arquivo texto.
+
+tail O comando tail é usado para exibir apenas as últimas linhas de um arquivo texto. Em geral é usado para observar as últimas atualizações em arquivos de log.
+
+diff diff é um utilitário de comparação de arquivos que gera as diferenças entre dois arquivos. É normalmente usado para mostrar as mudanças entre uma versão de um arquivo e a versão anterior do mesmo arquivo. O diff mostra as alterações realizadas por linha para arquivos de texto.
+
+tar O comando tar usado para armazenar vários arquivos em um único, preservando informações como datas e permissões. O tar também consegue gravar a propriedade e as permissões dos arquivos.
+
+chmod O chmod (abreviação de change mode, em português: alterar modo) é o comando que pode alterar permissões de acesso de objetos do sistema (arquivos e diretórios) e sinalizações (flags) de modo especial.
+
+chown O comando chown da shell do sistema Unix (como é o caso o GNU/Linux) é usado para alterar o dono de um determinado ficheiro. O comando significa change owner (mudar o dono).
+
+jobs O comando jobs mostra os processos que estão parados ou rodando em segundo plano.
+
+kill O comando kill dos sistemas operacionais Unix é usado para enviar sinais a determinados processos em execução. Por padrão é enviado o sinal SIGTERM que requisita a finalização do processo, por isso o nome kill (matar).
+
+ping O ping é um utilitário que usa o protocolo ICMP para testar a conectividade entre equipamentos. É um comando disponível praticamente em todos os sistemas operacionais. Seu funcionamento consiste no envio de pacotes para o equipamento de destino e na "escuta" das respostas. Se o equipamento de destino estiver ativo, uma resposta é devolvida ao computador solicitante.
+
+wget O wget é um comando usado nos sistemas operacionais Linux que se caracteriza por oferecer benefícios no download de arquivos.
+
+uname O comando uname permite mostrar informações detalhadas sobre seu sistema Linux. Isso inclui o nome da máquina, do sistema operacional, do kernel e assim por diante.
+
+top O comando top permite mostrar uma lista de processos que estão em execução e o quanto de CPU cada processo está sendo consumido.
+
+history O history é um comando em sistemas operacionais Unix que exibe o histórico de comandos utilizados anteriormente.
+
+
+Fonte: Alura
+https://www.alura.com.br/artigos/linux-download-instalacao-distribuicoes-e-principais-comandos
+
+
+Comando Linux
+
+01. Criar Arquivos de Texto – podemos utilizar o comando “cat” para criar um arquivo de texto, em especial arquivos mais simples. Você utilizará o comando “cat > arquivo. txt”, a partir dai você poderá escrever no terminal até pressione “Ctrl” + “d”, podendo utilizar a tecla “Enter” para pular linhas normalmente.
+
+02. Comando pode criar mais de um arquivo ao mesmo tempo.
+
+touch arq1 arq2 arq3
+
+03. Ler o arquivo selecionado.
+
+cat arq1
+
+04. escreve no documento criado se já existir algo, apago tudo e deixa só o adicionado.
+
+echo “meu gato” > arq1
+
+04. escreve no documento criado na última linha sem apagar o que já existe algo, só o adicionado na última linha.
+
+echo “meu gato” > arq1
+
+05. Listar arquivos do diretório.
+
+ls
+
+ls -1
+
+Listar conteúdo da pasta.
+
+ls  /cursos 
+
+Lista com as informações de permissão.
+
+ls -l
+
+06. Mudar permissões dos arquivos.
+Tabela de Permissões Octal para chmod
+
+Número
+Permissão
+Descrição
+7
+rwx (4+2+1)
+Leitura, escrita e execução
+6
+rw- (4+2)
+Leitura e escrita
+5
+r-x (4+1)
+Leitura e execução
+4
+r-- (4)
+Apenas leitura
+3
+-wx (2+1)
+Escrita e execução
+2
+-w- (2)
+Apenas escrita
+1
+--x (1)
+Apenas execução
+0
+--- (0)
+Sem permissões
+
+
+fonte:
+https://guialinux.uniriotec.br/chmod/
+chmod 400 arq1
+
+chmod 777 arq1
+
+chmod 500 arq1
+
+Permissão de executar script.
+
+chmod +X script.sh
+
+06. Criar pastas.
+
+mkdir pasta1
+
+Remover arquivos
+
+rm dados.py
+
+remover pasta.
+
+rm  -R  /Estudos
+
+Compactar arquivos:
+A primeira coisa que você deve ter notado é que, diferente do zip, o comando tar não necessita do -r. Ele age de forma recursiva por padrão. O -c é de create, ou seja, para indicar que desejamos criar um arquivo. O -z indica que queremos compactar com gzip. Utilizamos o -f (file), para que o comando crie o arquivo compactado.
+
+tar -czf projetos.tar.gz Projetos/
+
+Para descompactar, basta utilizar o -x de extract no lugar do -c.
+
+ tar -xzf projetos.tar.gz
+
+
+Usando o find para achar arquivos
+Eu sei que o nome dos arquivos contém pagamentos então é só acrescentá-lo ao comando.
+
+find / -name pagamentos
+
+Ignorando a caixa alta
+Para que não considere se é maiúscula ou minúscula, temos que falar para o find ignorá-las. Então, basta colocar o parâmetro i antes do name. Ficando, assim:
+
+find / -iname pagamentos.csv
+
+vamos utilizar algumas expressões regulares que indicarão para o programa essa situação.
+E o mais legal, a gente pode usar o asterisco onde quisermos na busca. Antes da palavra começar, por exemplo. Reparem nessa pesquisa:
+
+find -iname *pagamento*
+
+Buscando em um diretório específico
+Da mesma maneira que pedimos para o find procurar arquivos em todo o meu sistema, podemos especificar uma pasta específica e ele buscaria apenas os arquivos desse diretório.
+
+Bem, queremos que todos os arquivos de pagamento que estão na pasta financeiro, logo vamos dizer isso para o find informando o caminho até o diretório.
+
+find /compartilhamento/financeiro -iname *pagamento*
+
+
+Buscando arquivos com Locate
+O uso do locate é parecido com o do find. Precisamos informar para nosso sistema localizar (locate) um arquivo com o nome que queremos. Por exemplo: pagamentos
+
+locate pagamentos
+
+
+Buscando arquivos com Locate
+O uso do locate é parecido com o do find. Precisamos informar para nosso sistema localizar (locate) um arquivo com o nome que queremos. Por exemplo: pagamentos
+
+locate pagamentos
+
+
+Fazer busca de texto no arquivos, aceita regex.
+grep “ERROR”  *
+
+grep “ERROR”  *.log
+
+Comandos de Rede
+Alguns dos comandos de rede mais utilizados no Linux:
+ip: Manipula roteamento, dispositivos e túneis.
+ifconfig: Configura interfaces de rede.
+ping: Verifica a conectividade com outro host.
+traceroute: Mostra a rota que os pacotes tomam para alcançar um host.
+netstat: Exibe conexões de rede, tabelas de roteamento, estatísticas de interface, etc.
+ss: Exibe informações sobre soquetes.
+nslookup: Consulta servidores DNS.
+dig: Faz consultas DNS detalhadas.
+hostname: Mostra ou define o nome do host do sistema.
+curl: Transfere dados de ou para um servidor.
+wget: Baixa arquivos da web.
+mtr: Combina ping e traceroute para diagnóstico de rede.
+whois: Obtém informações sobre domínios registrados.
+iftop: Monitora o uso de largura de banda em tempo real.
+tcpdump: Captura e analisa pacotes de rede.
+ethtool: Configura dispositivos Ethernet.
+nmcli: Gerencia conexões de rede.
+nmap: Escaneia redes para auditoria de segurança.
+bmon: Monitora largura de banda em tempo real.
+firewalld: Configura regras de firewall.
+iperf: Mede o desempenho da rede.
+speedtest-cli: Verifica a velocidade da internet.
+vnstat: Monitora o tráfego de rede e o consumo de largura de banda.
+
+
