@@ -1,0 +1,247 @@
+Comandos Docker
+
+Os principais programas para virtualização são vmware e virtualbox para virtualização.
+
+Docker swarm init --advertise-addr 192.168.0.2
+
+O comando `docker swarm init --advertise-addr 192.168.0.2` é usado para inicializar um cluster Docker Swarm, que é uma ferramenta de orquestração de contêineres. Aqui está uma explicação detalhada:
+
+1. **`docker swarm init`**: Este comando inicializa um novo cluster Swarm e transforma o nó atual (a máquina onde o comando é executado) no nó gerenciador (manager) do cluster. O nó gerenciador é responsável por gerenciar o estado do cluster e distribuir tarefas para os nós trabalhadores (workers).
+
+2. **`--advertise-addr 192.168.0.2`**: Este parâmetro especifica o endereço IP que o nó gerenciador usará para se comunicar com outros nós no cluster. No seu caso, o endereço IP é `192.168.0.2`. Isso é útil em redes onde o nó pode ter múltiplos endereços IP ou interfaces de rede, e você quer garantir que os outros nós usem o endereço correto para se conectar ao gerenciador.
+
+Em resumo, ao executar este comando, você está criando um novo cluster Docker Swarm e configurando o nó atual como o gerenciador, usando o endereço IP `192.168.0.2` para comunicação.
+
+
+O kvm (virt), proxmox, qemu são usados para virtualização, esses são todos sistemas de virtualização e orquestração de máquinas virtuais. Aqui está um resumo de cada um:
+
+1. **KVM (Kernel-based Virtual Machine)**: É uma solução de virtualização completa para Linux que transforma o kernel Linux em um hipervisor. Ele permite que você execute múltiplas máquinas virtuais (VMs) isoladas, cada uma com seu próprio sistema operacional¹.
+
+2. **Proxmox VE**: É uma plataforma de virtualização de código aberto que combina KVM e LXC (Linux Containers). Proxmox oferece uma interface web intuitiva para gerenciar VMs e containers, além de recursos avançados como alta disponibilidade, backups e migração ao vivo².
+
+3. **QEMU (Quick Emulator)**: É um emulador e virtualizador de hardware de código aberto que pode executar sistemas operacionais e programas feitos para uma máquina (por exemplo, um PC x86) em outra máquina (por exemplo, um ARM). Quando usado com KVM, QEMU pode virtualizar sistemas operacionais com desempenho quase nativo¹.
+
+Essas ferramentas são frequentemente usadas juntas para criar ambientes de virtualização robustos e eficientes. Proxmox, por exemplo, utiliza KVM e QEMU para fornecer uma solução de virtualização poderosa e flexível.
+
+Docker service creste  --name web -- publish 80:80 --replicas=5 hhtpd
+
+O comando `docker service create --name web --publish 80:80 --replicas=5 httpd` é usado para criar um serviço no Docker Swarm. Aqui está uma explicação detalhada de cada parte do comando:
+
+- `docker service create`: Este comando cria um novo serviço no Docker Swarm.
+- `--name web`: Define o nome do serviço como "web".
+- `--publish 80:80`: Mapeia a porta 80 do host para a porta 80 do contêiner, permitindo que o serviço seja acessível externamente na porta 80.
+- `--replicas=5`: Cria 5 réplicas do serviço, garantindo alta disponibilidade e balanceamento de carga.
+- `httpd`: Especifica a imagem do Docker a ser usada, que neste caso é o servidor web Apache HTTPD.
+
+Este comando é útil para implantar um servidor web Apache com múltiplas réplicas, garantindo que o serviço esteja sempre disponível e possa lidar com um grande número de solicitações.
+
+
+Servidor Apache
+
+Para instalar e executar o servidor web Apache usando Docker, você pode usar o seguinte comando:
+
+```bash
+docker run -d --name apache-server -p 80:80 httpd
+```
+
+Aqui está uma explicação detalhada de cada parte do comando:
+
+- `docker run`: Inicia um novo contêiner.
+- `-d`: Executa o contêiner em segundo plano (modo "detached").
+- `--name apache-server`: Nomeia o contêiner como "apache-server".
+- `-p 80:80`: Mapeia a porta 80 do host para a porta 80 do contêiner, permitindo acesso ao servidor web através da porta 80.
+- `httpd`: Especifica a imagem do Docker a ser usada, que neste caso é a imagem oficial do servidor Apache HTTP⁴⁵.
+
+Este comando baixa a imagem do Apache do Docker Hub e inicia um contêiner com o servidor web Apache em execução. Você pode acessar o servidor web no seu navegador através do endereço `http://localhost` ou `http://[seu-endereço-IP]`.
+
+
+Docker ps
+
+O comando `docker ps` é usado para listar os contêineres em execução no seu sistema Docker. Aqui está um exemplo de como você pode usá-lo:
+
+```bash
+docker ps
+```
+
+Quando você executa esse comando, ele exibe uma tabela com informações sobre cada contêiner em execução, incluindo:
+
+- **CONTAINER ID**: O identificador único do contêiner.
+- **IMAGE**: A imagem do Docker usada para criar o contêiner.
+- **COMMAND**: O comando que está sendo executado no contêiner.
+- **CREATED**: O tempo desde que o contêiner foi criado.
+- **STATUS**: O estado atual do contêiner (por exemplo, "Up 5 minutes").
+- **PORTS**: As portas mapeadas do contêiner para o host.
+- **NAMES**: O nome do contêiner.
+
+Se você quiser ver todos os contêineres, incluindo os que não estão em execução, você pode usar o comando `docker ps -a`.
+
+
+Docker images
+Imagens Docker são essenciais para a containerização, permitindo que você empacote aplicativos e suas dependências em uma única unidade portátil. Aqui estão alguns pontos-chave sobre imagens Docker:
+
+1. **Docker Hub**: Este é o repositório mais popular para imagens Docker. Você pode encontrar uma grande variedade de imagens, desde oficiais como Ubuntu, Nginx e MySQL, até imagens contribuídas pela comunidade.
+2. **Criando Imagens**: Você pode criar suas próprias imagens Docker usando um Dockerfile, que é um script contendo instruções sobre como construir a imagem. Isso inclui especificar a imagem base, copiar arquivos e executar comandos.
+3. **Gerenciando Imagens**: O Docker fornece comandos para listar (`docker image ls`), remover (`docker image rm`) e inspecionar (`docker image inspect`) imagens.
+
+
+
+
+Rodando ubuntu no container docker, segue os passos para rodar o Ubuntu em um contêiner Docker:
+
+1. **Buscar a imagem do Ubuntu no Docker Hub**:
+   ```bash
+   docker search ubuntu
+   ```
+
+2. **Baixar a imagem do Ubuntu**:
+   ```bash
+   docker pull ubuntu
+   ```
+
+3. **Executar a imagem do Ubuntu**:
+   ```bash
+   docker run ubuntu
+   ```
+
+4. **Listar todos os contêineres (incluindo os que não estão em execução)**:
+   ```bash
+   docker ps -a
+   ```
+
+5. **Executar um contêiner em modo interativo e em segundo plano**:
+   ```bash
+   docker run -it -d ubuntu /bin/bash
+   ```
+
+6. **Listar os contêineres em execução**:
+   ```bash
+   docker ps
+   ```
+
+7. **Executar um comando dentro de um contêiner em execução**:
+   ```bash
+   docker exec -it <id_do_container> /bin/bash
+   ```
+Substitua <id_do_container> pelo ID do contêiner que você obteve no passo anterior12.
+
+Se você estiver criando um novo contêiner e quiser iniciar diretamente no bash, você pode usar o comando docker run:
+
+docker run -it ubuntu bash
+
+Isso iniciará um novo contêiner Ubuntu e abrirá o terminal bash diretamente
+
+8. **Anexar ao terminal de um contêiner em execução**:
+   ```bash
+   docker attach <id_do_container>
+   ```
+
+9. **Para sair do terminal do contêiner sem parar o contêiner**:
+   - Pressione `Ctrl + P` seguido de `Ctrl + Q`.
+
+10. **Para finalizar o contêiner**:
+    - Dentro do contêiner, você pode usar o comando `exit` ou `Ctrl + D`.
+
+Historico
+
+Docker: Docker search Ubuntu
+Docker: Docker pull ubuntu
+Docker: Docker run ubuntu
+Docker: Docker ps -a
+Docker: Docker run -it -d  Ubuntu  /Bin/bash
+Docker: Docker ps
+Docker: Docker exec  idcontener
+Docker: Docker attach idcontener
+Docker: Crt t crr p finalizar
+
+
+Comando Linux
+
+01. Criar Arquivos de Texto – podemos utilizar o comando “cat” para criar um arquivo de texto, em especial arquivos mais simples. Você utilizará o comando “cat > arquivo. txt”, a partir dai você poderá escrever no terminal até pressione “Ctrl” + “d”, podendo utilizar a tecla “Enter” para pular linhas normalmente.
+
+02. Comando pode criar mais de um arquivo ao mesmo tempo.
+
+touch arq1 arq2 arq3
+
+03. Ler o arquivo selecionado.
+
+cat arq1
+
+04. escreve no documento criado se já existir algo, apago tudo e deixa só o adicionado.
+
+echo “meu gato” > arq1
+
+04. escreve no documento criado na última linha sem apagar o que já existe algo, só o adicionado na última linha.
+
+echo “meu gato” > arq1
+
+05. Listar arquivos do diretório.
+
+ls
+
+ls -1
+
+Listar conteúdo da pasta.
+
+ls  /cursos 
+
+Lista com as informações de permissão.
+
+ls -l
+
+06. Mudar permissões dos arquivos .
+
+chmod 400 arq1
+
+chmod 777 arq1
+
+chmod 500 arq1
+
+
+06. Criar pastas.
+
+mkdir pasta1
+
+Remover arquivos
+
+rm dados.py
+
+remover pasta.
+
+rm  -R  /Estudos
+
+Compactar arquivos:
+A primera coisa que você deve ter notado é que, diferente do zip, o comando tar não necessita do -r. Ele age de forma recursiva por padrão. O -c é de create, ou seja, para indicar que desejamos criar um arquivo. O -z indica que queremos compactar com gzip. Utilizamos o -f (file), para que o comando crie o arquivo compactado.
+
+tar -czf projetos.tar.gz Projetos/
+
+Para descompactar, basta utilizar o -x de extract no lugar do -c.
+
+ tar -xzf projetos.tar.gz
+
+OCI criando chave SSH da Oracle
+
+Criando servidor web na OCi da oracle, comando principais do linux:
+
+cd
+mkdir .ssh
+cd .ssh
+ssh-keygen -b 2048 -t rsa -f cloudshellkey
+
+Em seguida, utilizando o Cloud Shell, acesse a instância via SSH com o comando abaixo e faça um teste de ping:
+ssh opc@<ip-publico-da-sua-instancia> -i ~/.ssh/cloudshellkey
+ping www.google.com
+Utilizando o Cloud Shell faça o login na instância utilizando sua chave privada:
+ssh opc@<ip-publico-da-sua-instancia> -i ~/.ssh/cloudshellkeyCOPIAR CÓDIGO
+Utilizando o instalador yum, vamos instalar o Apache:
+sudo yum install -y httpd
+Liberar a porta 80 no firewall
+sudo firewall-cmd --permanent --add-port=80/tcp
+sudo firewall-cmd --reload
+Iniciar o serviço do Apache:
+sudo systemctl start httpd
+Criar um conteúdo básico em uma página html:
+sudo su
+echo ‘Doguito Petshop Server 1’ >> /var/www/html/index.html
+
+
+
