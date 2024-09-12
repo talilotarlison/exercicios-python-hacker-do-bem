@@ -1,0 +1,483 @@
+*Etapa 1: Planejamento e Definição de Requisitos*
+Semelhante as atividades 1.1 até 1.4
+*Etapa 2: Desenvolvimento do Sistema*
+Você vai clonar o projeto e possivelmente não vai conseguir subir 🤡
+O docker fixado deve ajudar
+*Etapa 3: Criação de um pipeline CI/CD*
+Criar pipeline com github actions ou gitlab
+- Criar teste automatizado
+Colocar etapa de build na pipeline 
+Colocar etapa que roda os testes na pipeline
+*Etapa 4: Análise Estática de Código*
+Colocar etapa do bandit na pipeline
+Colocar etapa do Dependency-check
+*Etapa 5: Análise Dinâmica de Segurança (DAST)*
+Baixar o Owasp Zap
+Subir a aplicação
+Rodar o OWASP ZAP na aplicação de forma automatica
+Pegar o relatorio
+- corrigir as vulnerabilidades
+*Etapa 6: Entrega Contínua (CD)*
+Colocar etapa de build da pipeline  uma etapa de deploy(vou colocar q nem o exemplo da 2.5(acho q era essa))
+
+Etapa 7 e 8 ainda vou ter q ver
+mas acredito que vai ser complicado , pq aparentemente vai ter q hostear a aplicação e rodar as ferramentas no ip daquela aplicação...
+
+-------------------------------------------------------
+
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: 'sistema-de-reserva-de-salas'
+    static_configs:
+      - targets: ['192.168.98.10:8080']
+
+
+
+-------------------------------------------------------
+
+Se alguém estiver tendo problema para subir e quiser subir com docker
+Atualizar o requirements.txt para
+```
+Flask==2.2.5
+Flask-Bcrypt==1.0.1
+Flask-Login==0.6.2
+Flask-SQLAlchemy==3.0.3
+Flask-WTF==1.1.1
+WTForms==3.0.1
+Jinja2==3.1.2
+Werkzeug==2.2.3
+SQLAlchemy==1.4.46
+```
+Criar o dockerfile com
+```
+FROM python:3.9-slim-buster
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip cache purge && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY . .
+
+ENV FLASK_APP=todo_project/run.py
+EXPOSE 5000
+CMD ["flask", "run", "--host=0.0.0.0"]
+```
+Executar no terminal
+docker build -t hdb-python .
+docker run -p 5000:5000 hdb-python
+-------------------------------------------------------
+Com isso deve dar para acessar a app na http://127.0.0.1:5000/
+
+---------------------------------------------------------
+
+Pra quem quiser, aqui está o projeto com apenas o nescessario funcionando: 
+https://github.com/matheuswr89/Task-Manager-using-Flask
+
+--------------------------------------------------
+Login "senha "rnpesr". Abra o terminal e digite o comando abaixo:
+
+Copy
+  ```bash
+  ssh aluno@192.168.98.10
+  ```
+--------------------------------------------------
+
+git clone https://github.com/matheuswr89/Task-Manager-using-Flask.git
+
+
+Link direto para as pipelines no GitHub 
+
+https://github.com/PatrickNatan/Task-Manager-using-Flask/blob/master/.github/workflows/hdb.yml
+
+
+
+-------------------------------------------------------
+
+Pq ela é usada no runner, mas não é nescessário fazer o commit dela
+Cria um arquivo com o nome .gitignore e adicione config/** nele
+ pra quem precisar: sudo apt-get clean
+sudo apt-get autoremove
+sudo rm -rf /tmp/*
+ mais lixo pra apagar tbm: sudo rm -rf /var/log/*.gz
+sudo rm -rf /var/cache/apt/*
+
+ ----------------------- LIMPAR LAB -------------------------------------------
+
+limpar lab:
+ 
+docker stop $(docker ps -a -q)
+ 
+docker rm $(docker ps -a -q)
+
+docker system prune -a --volumes
+
+sudo apt clean
+
+sonnar-token: seu_sonnar_token
+
+-------------------------REINSTALAR TUDO ----------------------------------
+
+docker build -t reserva-salas .
+
+docker run -d -p 8080:8080 --rm --name reserva-salas reserva-salas
+
+sudo docker network create gitlab
+
+sudo docker run --detach \
+  --hostname gitlab.example.com \
+  --publish 80:80 \
+  --publish 443:443 \
+  --publish 9022:22 \
+  --name gitlab \
+  --restart always \
+  --network gitlab \
+  --volume /srv/gitlab/config:/etc/gitlab \
+  --volume /srv/gitlab/logs:/var/log/gitlab \
+  --volume /srv/gitlab/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:16.9.6-ce.0
+  
+  sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+  
+  sudo docker exec -it gitlab gitlab-rake "gitlab:password:reset"
+  
+Enter username: root
+
+Enter new password: RnpEsr123@
+
+Enter new password again: RnpEsr123@
+
+cd /opt/sonnarqube
+
+docker-compose up -d
+
+-------------------------------------------------------
+
+Se alguém estiver tendo problema para subir e quiser subir com docker
+Atualizar o requirements.txt para
+```
+Flask==2.2.5
+Flask-Bcrypt==1.0.1
+Flask-Login==0.6.2
+Flask-SQLAlchemy==3.0.3
+Flask-WTF==1.1.1
+WTForms==3.0.1
+Jinja2==3.1.2
+Werkzeug==2.2.3
+SQLAlchemy==1.4.46
+```
+Criar o dockerfile com
+```
+FROM python:3.9-slim-buster
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip cache purge && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY . .
+
+ENV FLASK_APP=todo_project/run.py
+EXPOSE 5000
+CMD ["flask", "run", "--host=0.0.0.0"]
+```
+Executar no terminal
+docker build -t hdb-python .
+docker run -p 5000:5000 hdb-python
+
+-------------------------------------------------------
+Com isso deve dar para acessar a app na http://127.0.0.1:5000/
+No requirements.txt vai ficar assism o jinja2 do projeto está na versão antiga:
+
+Flask==2.3.2
+Flask-Bcrypt==0.7.1
+Flask-Login==0.5.0
+Flask-SQLAlchemy==2.4.1
+Flask-WTF==0.14.3
+WTForms==2.2.1
+Jinja2==3.1.2
+
+-------------------------------------------------------
+git clone https://github.com/AdityaBagad/Task-Manager-using-Flask.git
+
+pip3 install -r requirements.txt
+
+python run.py
+[10/9 10:26] Talilo Tarlison: https://github.com/aquasecurity/trivy-action
+[10/9 10:26] Talilo Tarlison: Esse aqui é para usar o bandit no GitHub Actions: https://github.com/PyCQA/bandit-action
+[10/9 20:03] Talilo Tarlison: Do bandit?
+EU meio que coloquei isso na pipeline e foi...
+```
+  bandit:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+    steps:
+      - name: Perform Bandit Analysis
+        uses: PyCQA/bandit-action@v1
+```
+Do bandit?
+EU meio que coloquei isso na pipeline e foi...
+```
+  bandit:
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+    steps:
+      - name: Perform Bandit Analysis
+        uses: PyCQA/bandit-action@v1
+```
+ acho que vai exigir um pouco de tempo, pq pra rodar o DAST a aplicação tem q estar up
+E tipo a configuração do ZAP pede a URL da aplicação, deve ser possivel subir a app no mesmo job que o zap e fazer o zap apontar pra url, mas eu vou ver isso la pelo fds
+```
+steps:
+  - name: ZAP Scan
+    uses: zaproxy/action-full-scan@v0.10.0
+    with:
+      target: 'https://www.zaproxy.org/'
+```
+```
+  dependency_check:
+    needs: build
+    runs-on: ubuntu-latest
+    name: Dependency-Check
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Dependency-Check
+        uses: dependency-check/Dependency-Check_Action@main
+        id: Dependency-Check
+        with:
+          project: "Task-Manager-using-Flask"
+          path: "."
+          format: "HTML"
+          out: "reports"
+          args: >
+            --scan "**/*.py"
+            --scan "requirements.txt"
+            --failOnCVSS 7
+            --enableRetired
+      - name: Upload Dependency-Check results
+        uses: actions/upload-artifact@v3
+        with:
+          name: Dependency-Check report
+          path: ${{github.workspace}}/reports
+```
+-------------------------------------------------------
+Eh, consegui colocar o zap no CI, levou 11 minutos pra rodar 😂
+Mas quando ele concluiu, gerou issues
+https://github.com/PatrickNatan/Task-Manager-using-Flask/issues/1
+E também um aterfato com o report
+https://github.com/PatrickNatan/Task-Manager-using-Flask/actions/runs/10803762488
+
+deu certo a implementação do dast na pipeline(só não sei se é a maneira ideal)
+Pra quem quiser, aqui está o projeto com apenas o nescessario funcionando: 
+https://github.com/matheuswr89/Task-Manager-using-Flask
+Inclusive, esse aqui é o drive de todos os cursos
+https://drive.google.com/drive/folders/15RoUVsZzJr3Zz85TdvHUfYYHLYtkv747
+
+-------------------------------------------------------
+
+Não, ainda não pelo menos
+acho que vai exigir um pouco de tempo, pq pra rodar o DAST a aplicação tem q estar up
+E tipo a configuração do ZAP pede a URL da aplicação, deve ser possivel subir a app no mesmo job que o zap e fazer o zap apontar pra url, mas eu vou ver isso la pelo fds
+```
+steps:
+  - name: ZAP Scan
+    uses: zaproxy/action-full-scan@v0.10.0
+    with:
+      target: 'https://www.zaproxy.org/'
+```
+```
+  dependency_check:
+    needs: build
+    runs-on: ubuntu-latest
+    name: Dependency-Check
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.x"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Dependency-Check
+        uses: dependency-check/Dependency-Check_Action@main
+        id: Dependency-Check
+        with:
+          project: "Task-Manager-using-Flask"
+          path: "."
+          format: "HTML"
+          out: "reports"
+          args: >
+            --scan "**/*.py"
+            --scan "requirements.txt"
+            --failOnCVSS 7
+            --enableRetired
+      - name: Upload Dependency-Check results
+        uses: actions/upload-artifact@v3
+        with:
+          name: Dependency-Check report
+          path: ${{github.workspace}}/reports
+```
+-------------------------------------------------------
+E depois no models.py eu coloquei isso no final do arquivo: with app.app_context():
+    db.create_all()
+No ___init______.py eu tive que colocar isso: basedir = os.path.abspath(os.path.dirname(__file__))
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'site.db')
+
+
+----------------------- LIMPAR LAB -------------------------------------------
+
+limpar lab:
+ 
+docker stop $(docker ps -a -q)
+ 
+docker rm $(docker ps -a -q)
+
+docker system prune -a --volumes
+
+sudo apt clean
+
+sonnar-token: seu_sonnar_token
+
+-------------------------REINSTALAR TUDO ------------------------------------------------
+
+docker build -t reserva-salas .
+
+docker run -d -p 8080:8080 --rm --name reserva-salas reserva-salas
+
+sudo docker network create gitlab
+
+sudo docker run --detach \
+  --hostname gitlab.example.com \
+  --publish 80:80 \
+  --publish 443:443 \
+  --publish 9022:22 \
+  --name gitlab \
+  --restart always \
+  --network gitlab \
+  --volume /srv/gitlab/config:/etc/gitlab \
+  --volume /srv/gitlab/logs:/var/log/gitlab \
+  --volume /srv/gitlab/data:/var/opt/gitlab \
+  gitlab/gitlab-ce:16.9.6-ce.0
+  
+  sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+  
+  sudo docker exec -it gitlab gitlab-rake "gitlab:password:reset"
+  
+Enter username: root
+
+Enter new password: RnpEsr123@
+
+Enter new password again: RnpEsr123@
+
+cd /opt/sonnarqube
+
+docker-compose up -d
+
+-------------------------------------------------------
+Então teria que fazer algo do tipo
+
+sudo apt install pipx
+pipx install -r requirements.txt ?
+
+Se você quiser instalar alguma lib vai ter que tirar o -r requirements.txt e substituir pelo nome da lib
+
+-------------------------------------------------------
+docker system prune --all --force
+roda esse comando para saber como está 
+
+df -kh
+
+-------------------------------------------------------
+O `docker ps` lista os contêineres em uso. Os que não estiverem em uso o prune limpa.
+Por isso que o reservas-sala precisa ser recriado, pq a pipeline usa ele.
+mas você roda `docker build -t reserva-salas .` na pasta do reserva-salas, ok? Não é no diretório do my-golang-app
+-------------------------------------------------------
+Primeiro precisa limpar.
+docker system prune --all --force
+depois de rodar veja se diminuiu
+
+df -kh
+
+-------------------------------------------------------
+roda esse
+
+docker system prune --all --force
+[8/9 00:50] +55 61 9229-0011: `docker build -t reserva-salas .`
+[8/9 00:50] +55 61 9229-0011: depois 
+
+`docker images`
+
+só pra ter certeza que criou
+ O meu Dockerfile está assim
+-------------------------------------------------------
+FROM golang:1.22
+WORKDIR /app
+COPY . /app
+RUN go mod init example.com/m/v2
+RUN go mod tidy
+RUN go build -o reserva-salas
+CMD ["./reserva-salas"]
+[8/9 01:04] +55 61 9229-0011: Falta `RUN go mod tidy` antes do `RUN go build -o reserva-salas`
+[8/9 01:07] +55 61 9229-0011: https://esr-1.gitbook.io/atividade-pratica-aula-14-4/70Dv0j1atn4ElSzt6y8k
+[10/9 20:32] Talilo Tarlison: Se alguém estiver tendo problema para subir e quiser subir com docker
+Atualizar o requirements.txt para
+```
+Flask==2.2.5
+Flask-Bcrypt==1.0.1
+Flask-Login==0.6.2
+Flask-SQLAlchemy==3.0.3
+Flask-WTF==1.1.1
+WTForms==3.0.1
+Jinja2==3.1.2
+Werkzeug==2.2.3
+SQLAlchemy==1.4.46
+```
+Criar o dockerfile com
+```
+FROM python:3.9-slim-buster
+WORKDIR /app
+COPY requirements.txt .
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt && \
+    pip cache purge && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
+COPY . .
+
+ENV FLASK_APP=todo_project/run.py
+EXPOSE 5000
+CMD ["flask", "run", "--host=0.0.0.0"]
+```
+Executar no terminal
+docker build -t hdb-python .
+docker run -p 5000:5000 hdb-python
+-------------------------------------------------------
+Com isso deve dar para acessar a app na http://127.0.0.1:5000/
+Link direto para as pipelines no GitHub 
+
+https://github.com/PatrickNatan/Task-Manager-using-Flask/blob/master/.github/workflows/hdb.yml
