@@ -7,3 +7,10 @@ set(y)
 # {1, 6, 8}
 z = [("Bird", "Cat", "Dog", "Dog", "Bird", "Bird")]
 set(z)
+# {('Bird', 'Cat', 'Dog', 'Dog', 'Bird', 'Bird')}
+
+
+animals = set(["Cow", "Fish", "Pig", "Horse"])
+animals.add ("Cat")
+print (animals)
+# {'Pig', 'Cow', 'Cat', 'Fish', 'Horse'}
