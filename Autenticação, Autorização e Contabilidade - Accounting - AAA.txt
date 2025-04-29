@@ -1,0 +1,6 @@
+O componente abordado na estrutura de serviços de rede AAA (Autenticação, Autorização e Contabilidade - Accounting) neste cenário é:
+O AAA é composto por:
+
+Autenticação (Authentication) → Verifica a identidade do usuário (ex.: login no servidor).
+
+Autorização (Authorization) → Define o que o usuário pode fazer após autenticado (ex.: direitos "Somente Leitura" para usuários comuns e "Editar" para administradores).
