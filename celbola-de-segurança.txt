@@ -1,3 +1,5 @@
+## Cebola Segurança
+
 As três ferramentas de análise integradas ao **Cebola Segurança** são:  
 
  **Sguil** – Ferramenta de análise e correlação de eventos de segurança em tempo real, integrada a sensores como Snort/Suricata.  
@@ -44,7 +46,7 @@ A ferramenta **NIDS** (Network Intrusion Detection System) que utiliza uma **abo
  **Positivo real (Verdadeiro positivo - True Positive)**  
 
 
-  A análise determinística é o tipo que depende de condições predefinidas e pode analisar aplicativos que usam apenas portas fixas conhecidas. Este método:
+# A análise determinística é o tipo que depende de condições predefinidas e pode analisar aplicativos que usam apenas portas fixas conhecidas. Este método:
 
 Opera com regras e assinaturas pré-definidas
 
@@ -94,3 +96,45 @@ A análise probabilística é especialmente útil para:
 • Sistemas de detecção baseados em comportamento
 
 Esta abordagem é cada vez mais utilizada em soluções de segurança moderna que combinam diversos métodos analíticos.
+
+## Segurança em profundidade 
+Da segurança em profundidade para a arquitetura Mesh: como evoluiu nosso sossego no que tange à segurança da informação ?
+
+Frederico Cunha RegoFrederico Cunha Rego
+Frederico Cunha Rego
+Publicado em 11 de jun. de 2022
++ Siga
+Quão sossegados e confortáveis estão as áreas de TI das organizações em relação aos riscos cibernéticos? Quão confiantes os gestores estão nos investimentos realizados no segmento e preparados para responder para empresa no caso de um incidente de segurança ?
+
+No final do século passado presenciamos o nascimento da Internet, no início dos anos 90, como uma evolução da rede ARPANET, inicialmente usada por instituições governamentais e educacionais . Formei-me na faculdade de Ciências da Computação na PUCMINAS em 1995. Neste período a Internet estava engatinhando e segurança da informação não era uma buzz word, nem um tema abordado nos intervalos do cafezinho. A maior maior preocupação mundial em relação à TI e a segurança da informação era o bug do milênio. Um bug que na verdade foi uma falha de codificação humana, sistemas tinham campos ANO com somente 2 digitos. Ninguem tinha pensado que ao finalizar o ano de 1999, voltaríamos no tempo para 1900 onde nem tinhamos computadores, na verdade Henry Ford nem teria fundado sua companhia e lançado o primeiro automóvel, o que que ocorreu somente em 1908. Em verdade ainda nem estavamos preparados para ver os primeiros carros e aviões fazerem seus milagres e quebrar nossas primeiras barreiras físicas de espaço e tempo - Metaverso era devaneio de Julio Verne ou Isaac Asimov. Acabou que a profecia de Nostradamus de fim do mundo no ano 2000 não se concretizou e sobrevivemos ao bug do milênio. Nesta época escutei pela primeira vez o termo HTTP e tive meus primeiros contatos com os firewalls.
+
+A segurança da informação nesta época era endereçada por meio de um modelo de camadas conhecido como segurança em profundidade (defense in depth) e fazia-se uma analogia com uma cebola, onde a informação estaria no centro, para atingí-la era necessário transpor todas estas camadas. Este modelo de camadas era a referência para garantir a segurança da informação, medidas pelas métricas do acrônimo até hoje em uso: CID – Confidencialidade, Integridade e Disponibilidade. O nível de segurança da informação era medido pelo grau de CID que uma base de dados ou aplicação tinha.
+
+Além da cebola, usava-se também a metáfora com um castelo ou agência bancária. No primeiro para se chegar na princesa ou ao tesouro do rei, teria que se passar pelo fosso, muros, porta de ferro, guardas, inúmeros portões de acesso. Na agência bancária, para se chegar ao tesouro, tinha que ganhar o acesso à porta giratória, passar pelo guarda, portões e grades diversas, abrir a gigantesca porta do cofre para enfim chegar ao precioso ativo do banco. Trazendo para o universo da TI e da Segurança da Informação, cada barreira física mencionada nas analogias anteriores tinhamos soluções, ativos e produtos para tratar as camadas. Uma arquitetura de camadas muito referenciada nesta época foi o modelo de Defesa em Profundidade, com os seguintes níveis, de fora para dentro considerando nossa cebola: segurança física, identidade e acesso, perímetro, rede, host, aplicação e dados.  
+
+Só que ao longo do tempo, a Internet evoluiu, a população cresceu, o smartphone surgiu, e a informação se distribuiu/espalhou. Assim, o desafio que já era hercúleo, passou a ser quase impraticável no nosso atual mundo “anytime, anywhere e anydevice”.
+
+Neste novo campo de batalha, onde os castelos foram substituídos por nuvens, continuamos com os mesmos dois lados: bandidos X mocinhos. De um lado temos “bandidos” cada vez mais profissionais ja que hacker virou uma atividade altamente rentável e com novas estratégias como os ramsomwares e até países com exércitos cibernéticos a postos 24x7. Do outro lado, esforços multidisciplinares e conjunto para combater este enxame de cyberataques: players/vendors de segurança, empresas e instituições diversas, orgãos reguladores, com enorme mobilização de recursos humanos e financeiros que permitiu evoluir a proteção desde então – um excelente exemplo é a LGPD (GDPR) e também a criação de blue e red teams nas corporações.
+
+Assim, tendo este panorama  como pano de fundo a proteção da informação evoluiu do nosso modelo cebola para um novo framework chamado Cybersecurity Mesh Architecture (CSMA), proposto em documento liberado pelo Gartner em outubro de 2021.
+
+Não foi fornecido texto alternativo para esta imagem
+O CSMA é uma “Top Trend” do Gartner para 2022 e busca endereçar os novos desafios como ampliação da superfície de ataque, segurança em DEVOPS, Internet das coisas ( IOT) e assim por diante. Os principais pontos que valem ser destacados como novas prerrogativas para a atualidade:
+
+1)     Diminuição de silos/vendors: mover da antiga abordagem de “best-of-breed stand-alone” para uma abordagem Mesh, com soluções coesas e integradas e se ajudando/complementando.
+
+2)     Atuação preditiva: adoção do conceito Zero Trust Access.
+
+3)     Administração centralizada e colaborativa: plataforma única de monitoramento, investigação, relatórios, alertas e respostas, permitindo detecção e respostas rápidas e automatizadas.  
+
+4)     Gestão das políticas e posturas de segurança centralizadas e implementação estendida/distribuída, segurança em todos os eventuais pontos da superfície de ataque (usuários, dispositivos, aplicações e dados).
+
+5)     Adoção de AI ( Inteligência Artificial) e “Threat Inteligence” nos SNOCs.
+
+6)     Pessoas, Processos e Produtos integrados: este tripé 3P continua sendo o alicerce em qualquer framework.
+
+Este é um artigo breve, cujo o intuito é  chamar a atenção para a contínua necessidade de atualização, capacitação e educação para quem deseja atuar no mundo de cybersec e mitigar os riscos da melhor forma possível. Esta é uma constante no mundo de TI desde o modelo cebola até o modelo Mesh. Assim, para nosso panorama atual, a abordagem CSMA desponta como a melhor referência para organizações. Como era de se esperar, a CSMA sozinha não tornará sua informação mais segura, mas pode nortear os CISOS e profissionais da área nos seus PDTIs/PSIs e apoiar a tornar o ambiente mais preparado e seguro.
+
+Para manter o caráter de alerta de quem trabalha na área, engenharia social continua sendo a melhor porta de entrada, algumas recomendações são atemporais, como “prudência e canja de galinha não fazem mal a ninguem”. Tratem seus dados e informações com tanto ou mais cuidado que seus bens preciosos e dinheiro, pois eles possuem valores incalculáveis.
+
+Por fim, respondendo a pergunta inicial, um de nossas principais responsabilidades como profissionais de segurança da informação e TI é sensibilizar e mostrar que não se investe em segurança da informação por si só, o que está se comprando é sossego, e não para a TI. Sossego para o “brand”, para o negócio, para a rentabilidade da empresa, para o RH e colaboradores, para os indicadores do Board, para o valuation nas bolsas de valores. Em última instância, sossego para a organização toda focar no seu propósito maior para a qual a mesma foi sonhada e construída !!
