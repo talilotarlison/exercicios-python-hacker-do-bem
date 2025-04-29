@@ -1,0 +1,96 @@
+As três ferramentas de análise integradas ao **Cebola Segurança** são:  
+
+ **Sguil** – Ferramenta de análise e correlação de eventos de segurança em tempo real, integrada a sensores como Snort/Suricata.  
+ **Kibana** – Painel de visualização interativa para dados do Elasticsearch, usado para análise de logs e alertas.  
+ **OSSEC** (ou **Wazuh**, em versões mais recentes) – Sistema de detecção de intrusão baseado em host (HIDS) para monitoramento de integridade e análise de logs.  
+
+### Por que não as outras?  
+- **Wireshark** – Não é uma ferramenta integrada diretamente ao Cebola Segurança (é um analisador de pacotes independente).  
+- **Snort** e **Suricata** – São ferramentas de **detecção de intrusão em rede (NIDS)**, mas não são consideradas ferramentas de análise no contexto do Cebola Segurança.  
+
+**Respostas corretas:**  
+☑ **Sguil**  
+☑ **Kibana**  
+☑ **OSSEC** (ou **Wazuh**, dependendo da versão)
+
+A ferramenta **NIDS** (Network Intrusion Detection System) que utiliza uma **abordagem baseada em assinaturas** e possui **multithreading nativo** para detecção eficiente de alertas é o **Suricata**.  
+
+**Suricata**  
+
+### Explicação:  
+- **Suricata** é um NIDS de alto desempenho que suporta **análise baseada em assinaturas** (como o Snort) e **multithreading nativo**, permitindo processamento paralelo para melhor escalabilidade em redes de alta velocidade.  
+- Ele também oferece suporte a detecção baseada em anomalias e integração com ferramentas como **ELK** e **Zeek**.  
+
+### Por que não as outras opções?  
+- **Snort** → Também é baseado em assinaturas, mas **não tem multithreading nativo** (é single-threaded, limitando desempenho em redes rápidas).  
+- **Zeek (antigo Bro)** → Foca em **análise comportamental** e geração de logs, não sendo primariamente um sistema baseado em assinaturas como o Suricata/Snort.  
+- **Bro** → Nome antigo do Zeek, mesma explicação acima.  
+
+**Resposta correta:**  
+**Suricata**  
+
+
+  A classificação correta para um alerta que **identifica com precisão a ocorrência de uma exploração** (ou seja, detecta corretamente um ataque real) é:  
+
+ **Positivo real (Verdadeiro positivo - True Positive)**  
+
+### Explicação:  
+- **Positivo real (True Positive - TP):** O alerta foi disparado e corresponde a uma atividade maliciosa real.  
+- **Falso positivo (False Positive - FP):** O alerta foi disparado, mas **não** corresponde a uma ameaça real (erro de detecção).  
+- **Verdadeiro negativo (True Negative - TN):** Nenhum alerta foi gerado e **não havia ameaça** (situação normal).  
+- **Falso negativo (False Negative - FN):** Nenhum alerta foi gerado, mas **houve uma exploração real** (o sistema falhou em detectar).  
+
+**Resposta correta:**  
+ **Positivo real (Verdadeiro positivo - True Positive)**  
+
+
+  A análise determinística é o tipo que depende de condições predefinidas e pode analisar aplicativos que usam apenas portas fixas conhecidas. Este método:
+
+Opera com regras e assinaturas pré-definidas
+
+É previsível e repetível
+
+Funciona bem com aplicativos que usam portas padrão fixas (como HTTP na 80, HTTPS na 443)
+
+Não utiliza probabilidades ou modelos estatísticos
+
+Baseia-se em correspondência exata de padrões
+
+As outras opções não se encaixam:
+
+Análise estatística: usa modelos probabilísticos e histórico de comportamento
+
+Análise de registro: foca em examinar logs e registros de eventos
+
+Análise probabilística: emprega cálculos de probabilidade e incerteza
+
+A abordagem determinística é típica de sistemas baseados em assinaturas como Snort e Suricata quando configurados para regras estáticas.
+
+
+A análise probabilística é a que:
+
+Utiliza diferentes métodos matemáticos e estatísticos
+
+Calcula a probabilidade de um evento de segurança ter ocorrido ou vir a ocorrer
+
+Trabalha com graus de incerteza e cenários possíveis
+
+Considera múltiplos fatores e variáveis para estimar riscos
+
+É fundamental em técnicas modernas como Machine Learning para segurança
+
+Diferença das outras abordagens:
+
+Determinístico: decisões binárias baseadas em regras fixas (ex: assinaturas de vírus)
+
+Estatístico: foca em análise de padrões históricos e desvios
+
+Registro: análise póstuma de logs e eventos registrados
+
+A análise probabilística é especialmente útil para:
+• Detecção de ameaças avançadas (APTs)
+• Previsão de ataques
+• Avaliação de riscos dinâmicos
+• Sistemas de detecção baseados em comportamento
+
+Esta abordagem é cada vez mais utilizada em soluções de segurança moderna que combinam diversos métodos analíticos.
