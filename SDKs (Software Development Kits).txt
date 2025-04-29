@@ -1,0 +1,21 @@
+SDKs (Software Development Kits) são conjuntos de ferramentas, bibliotecas, documentação e exemplos de código que ajudam os desenvolvedores a criar aplicações de forma mais rápida e eficiente para uma plataforma específica (como Android, iOS, Windows, APIs de serviços em nuvem, etc.). Suas principais funções incluem:
+
+Fornecer bibliotecas pré-construídas (evitando a reinvenção da roda).
+
+Facilitar a integração com APIs, frameworks e hardware (ex: câmeras, sensores).
+
+Otimizar o tempo de desenvolvimento, reduzindo custos.
+
+Incluir documentação e exemplos para orientar os desenvolvedores.
+
+Por que as outras opções estão incorretas?
+"Manter a integridade dos dados e identificar entradas mal-intencionadas" → Isso é função de técnicas como validação de entrada ou firewalls (não do SDK).
+
+"Evitar engenharia reversa" → Isso requer técnicas como ofuscação de código ou criptografia (não é o propósito principal de um SDK).
+
+"Verificar se o software pode ser executado nas configurações de segurança necessárias" → Isso é papel de testes de compatibilidade ou ferramentas de análise estática.
+
+"Armazenar instruções SQL pré-compiladas" → Isso se refere a stored procedures em bancos de dados, não a SDKs.
+
+Resumo:
+O SDK é um kit de desenvolvimento que acelera a criação de apps ao fornecer ferramentas prontas, códigos de exemplo e integrações padronizadas. 
