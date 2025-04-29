@@ -1,0 +1,19 @@
+Foi solicitado que você implemente um programa de integridade de dados para proteger os arquivos de dados que precisam ser baixados eletronicamente pela equipe de vendas. Você decidiu usar o algoritmo hash mais forte disponível nos seus sistemas. Qual algoritmo hash você selecionaria?
+
+
+Para garantir a **integridade dos dados** com o **algoritmo hash mais forte** disponível atualmente, a escolha correta seria:  
+
+**SHA-256**  
+
+### Por quê?  
+- **SHA-256** (parte da família **SHA-2**) é um algoritmo de hash **criptograficamente seguro**, amplamente adotado para verificação de integridade de arquivos.  
+- Ele gera um **resumo (hash) de 256 bits**, tornando-o **resistente a colisões** (diferente de MD5 e SHA-1, que são considerados vulneráveis).  
+- É usado em certificados digitais, blockchain (Bitcoin) e assinaturas de software.  
+
+### Por que não os outros?  
+**MD5** → Vulnerável a colisões, **inseguro** para uso moderno.  
+**SHA-1** → Também considerado **quebrado** para aplicações críticas desde 2017.  
+**AES** → **Não é um algoritmo de hash**, e sim de **criptografia simétrica** (usado para confidencialidade, não integridade).  
+
+**Resposta correta:**  
+ **SHA-256**
